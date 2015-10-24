@@ -1,0 +1,524 @@
+Num conflicts: 74
+Num conflicts (filtered): 13
+Expected conflicts: 5.1061633968
+Expected conflicts (filtered): 3.5208352422
+Conflict importance: 1.35889828204
+Conflict importance (filtered): 1.24828551529
+Losers round 0
+Mr Fluffles, Gafter
+p = 1.0
+importance = 1.0
+{Mr Fluffles: 1.0}
+{Gafter: 1.0}
+
+Losers round 1
+Firewater, Scoopy
+p = 0.1875
+importance = 0.046875
+{Firewater: 0.75, Huckster: 0.25}
+{Scoopy: 0.25, JPez: 0.75}
+
+Losers round 1
+Scoopy, Firewater
+p = 0.1875
+importance = 0.046875
+{Scoopy: 0.75, JPez: 0.25}
+{Firewater: 0.25, Huckster: 0.75}
+
+Losers round 1
+229, Litany
+p = 0.125
+importance = 0.03125
+{229: 0.25, AAJ: 0.75}
+{Baby: 0.5, Litany: 0.5}
+
+Winners round 2
+Fortune, 229
+p = 0.25
+importance = 0.0277777777778
+{Fortune: 1.0}
+{229: 0.25, AAJ: 0.75}
+
+Winners round 2
+Lock, JPez
+p = 0.25
+importance = 0.0277777777778
+{Lock: 1.0}
+{JPez: 0.25, Scoopy: 0.75}
+
+Losers round 3
+Wishh, Bonny
+p = 0.440826416016
+importance = 0.027551651001
+{Kofi: 0.25, Wishh: 0.75}
+{inShane: 0.102722167969, Stone Free: 0.00274658203125, Bonny: 0.587768554688, Brooke: 0.0274658203125, PW | Vincessant: 0.0280151367188, Cava: 0.25, Leo: 0.00128173828125}
+
+Losers round 1
+Scoop, Vivi
+p = 0.0625
+importance = 0.015625
+{Brooke: 0.75, Scoop: 0.25}
+{Vivi: 0.25, BulaclaFlocka: 0.75}
+
+Losers round 2
+Phatcat, Cogzilla
+p = 0.125
+importance = 0.0138888888889
+{Phatcat: 0.5, DJ: 0.5}
+{JL: 0.5, Cogzilla: 0.25, Skid: 0.25}
+
+Losers round 2
+Scoopy, 229
+p = 0.0966796875
+importance = 0.0107421875
+{Firewater: 0.140625, JPez: 0.109375, Scoopy: 0.515625, Huckster: 0.234375}
+{Baby: 0.03125, Litany: 0.03125, 229: 0.1875, AAJ: 0.75}
+
+Losers round 2
+JPez, AAJ
+p = 0.08203125
+importance = 0.00911458333333
+{Firewater: 0.140625, JPez: 0.109375, Scoopy: 0.515625, Huckster: 0.234375}
+{Baby: 0.03125, Litany: 0.03125, 229: 0.1875, AAJ: 0.75}
+
+Losers round 2
+Bonny, Leo
+p = 0.076904296875
+importance = 0.008544921875
+{Brooke: 0.046875, Cava: 0.25, Bonny: 0.703125}
+{inShane: 0.515625, PW | Vincessant: 0.140625, Stone Free: 0.234375, Leo: 0.109375}
+
+Losers round 4
+Junebug, Conn Man
+p = 0.1875
+importance = 0.0075
+{Junebug: 0.75, SG: 0.25}
+{Conn Man: 0.25, DJ: 0.25, Phatcat: 0.25, Gerg (PB&J before s0ft): 0.25}
+
+Losers round 2
+Stone Free, Brooke
+p = 0.066650390625
+importance = 0.00740559895833
+{inShane: 0.140625, PW | Vincessant: 0.515625, Stone Free: 0.109375, Leo: 0.234375}
+{Brooke: 0.609375, Scoop: 0.140625, Vivi: 0.015625, BulaclaFlocka: 0.234375}
+
+Losers round 5
+SG, The Brig
+p = 0.23609375814
+importance = 0.00655815994833
+{Junebug: 0.25, SG: 0.75}
+{Scoopy: 0.000142777338624, Reqy: 0.0629950594157, PB&J (Gerg before Sweedish): 0.0816756784916, The Brig: 0.31479167752, Firewater: 0.000523516908288, Kofi: 0.0608970411122, Wishh: 0.0817794799805, AAJ: 0.000139977782965, Hop: 0.000710198655725, Cava: 0.317547697574, Bonny: 0.0397076532245, Darkseid: 0.0390892419964}
+
+Losers round 6
+SG, AceOfFlakes
+p = 0.274579130546
+importance = 0.00560365572544
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 2
+The Brig, Chibi
+p = 0.046875
+importance = 0.00520833333333
+{Mr Clean: 0.046875, The Brig: 0.25, Darkseid: 0.703125}
+{Chibi: 0.1875, Mr Fluffles: 0.03125, Llama: 0.75, Gafter: 0.03125}
+
+Losers round 4
+Lock, DJ
+p = 0.125
+importance = 0.005
+{Lock: 0.5, Fortune: 0.5}
+{Phatcat: 0.25, DJ: 0.25, Conn Man: 0.25, Gerg (PB&J before s0ft): 0.25}
+
+Losers round 3
+Bonny, Wishh
+p = 0.0625
+importance = 0.00390625
+{Cava: 0.75, Bonny: 0.25}
+{Scoopy: 0.0280151367188, Firewater: 0.102722167969, Kofi: 0.587768554688, Wishh: 0.25, AAJ: 0.0274658203125, JPez: 0.00274658203125, Huckster: 0.00128173828125}
+
+Losers round 4
+AceOfFlakes, Wishh
+p = 0.0959841907024
+importance = 0.0038393676281
+{Reqy: 0.120681762695, PB&J (Gerg before Sweedish): 0.411849975586, The Brig: 0.12890625, Llama: 0.00933837890625, Mr Clean: 0.00169372558594, AceOfFlakes: 0.17578125, Darkseid: 0.151748657227}
+{inShane: 0.00642013549805, Kofi: 0.119766235352, Wishh: 0.546043395996, Bonny: 0.18367767334, Brooke: 0.00171661376953, PW | Vincessant: 0.00175094604492, Cava: 0.140625}
+
+Losers round 4
+The Brig, Wishh
+p = 0.0762176513672
+importance = 0.00304870605469
+{PB&J (Gerg before Sweedish): 0.140625, Darkseid: 0.1181640625, Reqy: 0.1904296875, Hop: 0.0087890625, The Brig: 0.5419921875}
+{Scoopy: 0.00175094604492, AAJ: 0.00171661376953, Firewater: 0.00642013549805, Kofi: 0.18367767334, Wishh: 0.140625, Bonny: 0.119766235352, Cava: 0.546043395996}
+
+Losers round 2
+Wishh, Huckster
+p = 0.02734375
+importance = 0.00303819444444
+{Kofi: 0.703125, Wishh: 0.25, AAJ: 0.046875}
+{Firewater: 0.515625, JPez: 0.234375, Scoopy: 0.140625, Huckster: 0.109375}
+
+Losers round 2
+Firewater, 229
+p = 0.0263671875
+importance = 0.0029296875
+{Firewater: 0.140625, JPez: 0.109375, Scoopy: 0.515625, Huckster: 0.234375}
+{Baby: 0.03125, Litany: 0.03125, 229: 0.1875, AAJ: 0.75}
+
+Losers round 3
+AceOfFlakes, The Brig
+p = 0.046875
+importance = 0.0029296875
+{Reqy: 0.25, PB&J (Gerg before Sweedish): 0.5625, AceOfFlakes: 0.1875}
+{Chibi: 0.002197265625, Mr Clean: 0.027099609375, Darkseid: 0.5712890625, Llama: 0.1494140625, The Brig: 0.25}
+
+Losers round 4
+The Brig, Wishh
+p = 0.0703884065151
+importance = 0.0028155362606
+{Reqy: 0.120681762695, PB&J (Gerg before Sweedish): 0.411849975586, The Brig: 0.12890625, Llama: 0.00933837890625, Mr Clean: 0.00169372558594, AceOfFlakes: 0.17578125, Darkseid: 0.151748657227}
+{inShane: 0.00642013549805, Kofi: 0.119766235352, Wishh: 0.546043395996, Bonny: 0.18367767334, Brooke: 0.00171661376953, PW | Vincessant: 0.00175094604492, Cava: 0.140625}
+
+Losers round 3
+Fortune, inShane
+p = 0.0422973632812
+importance = 0.00264358520508
+{Lock: 0.5, Fortune: 0.5}
+{inShane: 0.0845947265625, Stone Free: 0.0384521484375, Vivi: 0.0013427734375, Leo: 0.0823974609375, Scoop: 0.0472412109375, Brooke: 0.357055664062, PW | Vincessant: 0.310180664062, BulaclaFlocka: 0.0787353515625}
+
+Losers round 4
+The Brig, Bonny
+p = 0.0649123638868
+importance = 0.00259649455547
+{PB&J (Gerg before Sweedish): 0.140625, Darkseid: 0.1181640625, Reqy: 0.1904296875, Hop: 0.0087890625, The Brig: 0.5419921875}
+{Scoopy: 0.00175094604492, AAJ: 0.00171661376953, Firewater: 0.00642013549805, Kofi: 0.18367767334, Wishh: 0.140625, Bonny: 0.119766235352, Cava: 0.546043395996}
+
+Losers round 4
+SG, Phatcat
+p = 0.0625
+importance = 0.0025
+{Junebug: 0.75, SG: 0.25}
+{Conn Man: 0.25, DJ: 0.25, Phatcat: 0.25, Gerg (PB&J before s0ft): 0.25}
+
+Losers round 3
+Reqy, Llama
+p = 0.037353515625
+importance = 0.00233459472656
+{Reqy: 0.25, PB&J (Gerg before Sweedish): 0.5625, AceOfFlakes: 0.1875}
+{Chibi: 0.002197265625, Mr Clean: 0.027099609375, Darkseid: 0.5712890625, Llama: 0.1494140625, The Brig: 0.25}
+
+Losers round 2
+inShane, Scoop
+p = 0.019775390625
+importance = 0.002197265625
+{inShane: 0.140625, PW | Vincessant: 0.515625, Stone Free: 0.109375, Leo: 0.234375}
+{Brooke: 0.609375, Scoop: 0.140625, Vivi: 0.015625, BulaclaFlocka: 0.234375}
+
+Losers round 2
+Scoopy, Litany
+p = 0.01611328125
+importance = 0.00179036458333
+{Firewater: 0.140625, JPez: 0.109375, Scoopy: 0.515625, Huckster: 0.234375}
+{Baby: 0.03125, Litany: 0.03125, 229: 0.1875, AAJ: 0.75}
+
+Losers round 5
+SG, Wishh
+p = 0.0613346099854
+importance = 0.00170373916626
+{Junebug: 0.25, SG: 0.75}
+{Scoopy: 0.000142777338624, Reqy: 0.0629950594157, PB&J (Gerg before Sweedish): 0.0816756784916, The Brig: 0.31479167752, Firewater: 0.000523516908288, Kofi: 0.0608970411122, Wishh: 0.0817794799805, AAJ: 0.000139977782965, Hop: 0.000710198655725, Cava: 0.317547697574, Bonny: 0.0397076532245, Darkseid: 0.0390892419964}
+
+Losers round 8
+Sweedish Delight, The Moon
+p = 0.1318359375
+importance = 0.00162760416667
+{Fortune: 0.00772849583173, Lock: 0.00772849583173, Wenbo: 0.197298108404, Sweedish Delight: 0.5625, Redd: 0.1875, SG: 0.0200213949357, AceOfFlakes: 0.0172235049964}
+{Wenbo: 0.10620277672, Sweedish Delight: 0.109375, The Moon: 0.234375, s0ft: 0.55004722328}
+
+Losers round 3
+Fortune, Scoop
+p = 0.0236206054688
+importance = 0.0014762878418
+{Lock: 0.5, Fortune: 0.5}
+{inShane: 0.0845947265625, Stone Free: 0.0384521484375, Vivi: 0.0013427734375, Leo: 0.0823974609375, Scoop: 0.0472412109375, Brooke: 0.357055664062, PW | Vincessant: 0.310180664062, BulaclaFlocka: 0.0787353515625}
+
+Losers round 5
+AceOfFlakes, Phatcat
+p = 0.05078125
+importance = 0.00141059027778
+{PB&J (Gerg before Sweedish): 0.1875, AceOfFlakes: 0.8125}
+{Fortune: 0.375, Gerg (PB&J before s0ft): 0.0625, Lock: 0.375, Phatcat: 0.0625, DJ: 0.0625, Conn Man: 0.0625}
+
+Losers round 4
+AceOfFlakes, Bonny
+p = 0.0322870910168
+importance = 0.00129148364067
+{Reqy: 0.120681762695, PB&J (Gerg before Sweedish): 0.411849975586, The Brig: 0.12890625, Llama: 0.00933837890625, Mr Clean: 0.00169372558594, AceOfFlakes: 0.17578125, Darkseid: 0.151748657227}
+{inShane: 0.00642013549805, Kofi: 0.119766235352, Wishh: 0.546043395996, Bonny: 0.18367767334, Brooke: 0.00171661376953, PW | Vincessant: 0.00175094604492, Cava: 0.140625}
+
+Losers round 2
+Brooke, Stone Free
+p = 0.010986328125
+importance = 0.001220703125
+{Brooke: 0.046875, Cava: 0.25, Bonny: 0.703125}
+{inShane: 0.515625, PW | Vincessant: 0.140625, Stone Free: 0.234375, Leo: 0.109375}
+
+Losers round 2
+AAJ, JPez
+p = 0.010986328125
+importance = 0.001220703125
+{Kofi: 0.703125, Wishh: 0.25, AAJ: 0.046875}
+{Firewater: 0.515625, JPez: 0.234375, Scoopy: 0.140625, Huckster: 0.109375}
+
+Losers round 3
+SG, Huckster
+p = 0.0192260742188
+importance = 0.00120162963867
+{Junebug: 0.75, SG: 0.25}
+{Scoopy: 0.298095703125, Firewater: 0.081298828125, Litany: 0.002685546875, AAJ: 0.439453125, JPez: 0.035888671875, 229: 0.06298828125, Baby: 0.002685546875, Huckster: 0.076904296875}
+
+Losers round 7
+The Moon, Sweedish Delight
+p = 0.0625
+importance = 0.0009765625
+{The Moon: 0.25, s0ft: 0.75}
+{Fortune: 0.0743690678784, PB&J (Gerg before Sweedish): 0.000525595721761, The Brig: 0.000164507897352, Lock: 0.0743690678784, Wishh: 0.00063550934064, Cava: 0.000163665565196, Wenbo: 0.566414809174, Sweedish Delight: 0.25, SG: 0.019067403525, AceOfFlakes: 0.0142903730193}
+
+Losers round 4
+The Brig, Bonny
+p = 0.023677200079
+importance = 0.000947088003159
+{Reqy: 0.120681762695, PB&J (Gerg before Sweedish): 0.411849975586, The Brig: 0.12890625, Llama: 0.00933837890625, Mr Clean: 0.00169372558594, AceOfFlakes: 0.17578125, Darkseid: 0.151748657227}
+{inShane: 0.00642013549805, Kofi: 0.119766235352, Wishh: 0.546043395996, Bonny: 0.18367767334, Brooke: 0.00171661376953, PW | Vincessant: 0.00175094604492, Cava: 0.140625}
+
+Losers round 6
+The Brig, AceOfFlakes
+p = 0.0449592605833
+importance = 0.000917535930271
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 6
+PB&J (Gerg before Sweedish), Wenbo
+p = 0.0427484520366
+importance = 0.000872417388502
+{Fortune: 0.378875251281, PB&J (Gerg before Sweedish): 0.0598011132315, The Brig: 0.0187173429877, Lock: 0.378875251281, Wishh: 0.072306840535, Cava: 0.0186215043068, AceOfFlakes: 0.072802696377}
+{Wenbo: 0.71484375, Sweedish Delight: 0.25, SG: 0.03515625}
+
+Losers round 5
+SG, Bonny
+p = 0.0297807399184
+importance = 0.00082724277551
+{Junebug: 0.25, SG: 0.75}
+{Scoopy: 0.000142777338624, Reqy: 0.0629950594157, PB&J (Gerg before Sweedish): 0.0816756784916, The Brig: 0.31479167752, Firewater: 0.000523516908288, Kofi: 0.0608970411122, Wishh: 0.0817794799805, AAJ: 0.000139977782965, Hop: 0.000710198655725, Cava: 0.317547697574, Bonny: 0.0397076532245, Darkseid: 0.0390892419964}
+
+Losers round 5
+Lock, Reqy
+p = 0.0199610546842
+importance = 0.000554473741229
+{Lock: 0.5, Fortune: 0.5}
+{Cava: 0.0744860172272, inShane: 0.000472673855256, Reqy: 0.0399221093685, PB&J (Gerg before Sweedish): 0.239204452926, The Brig: 0.0748693719506, Kofi: 0.0334960224573, Wishh: 0.28922736214, Bonny: 0.0513706676429, Llama: 0.000754586071707, Brooke: 0.000126383383758, Mr Clean: 0.00013686119928, Darkseid: 0.0501991879719, PW | Vincessant: 0.000128911051434, AceOfFlakes: 0.145605392754}
+
+Losers round 2
+Firewater, Litany
+p = 0.00439453125
+importance = 0.00048828125
+{Firewater: 0.140625, JPez: 0.109375, Scoopy: 0.515625, Huckster: 0.234375}
+{Baby: 0.03125, Litany: 0.03125, 229: 0.1875, AAJ: 0.75}
+
+Losers round 3
+Kofi, PW | Vincessant
+p = 0.00700378417969
+importance = 0.00043773651123
+{Kofi: 0.25, Wishh: 0.75}
+{inShane: 0.102722167969, Stone Free: 0.00274658203125, Bonny: 0.587768554688, Brooke: 0.0274658203125, PW | Vincessant: 0.0280151367188, Cava: 0.25, Leo: 0.00128173828125}
+
+Losers round 5
+Junebug, Darkseid
+p = 0.0097723104991
+importance = 0.000271453069419
+{Junebug: 0.25, SG: 0.75}
+{Scoopy: 0.000142777338624, Reqy: 0.0629950594157, PB&J (Gerg before Sweedish): 0.0816756784916, The Brig: 0.31479167752, Firewater: 0.000523516908288, Kofi: 0.0608970411122, Wishh: 0.0817794799805, AAJ: 0.000139977782965, Hop: 0.000710198655725, Cava: 0.317547697574, Bonny: 0.0397076532245, Darkseid: 0.0390892419964}
+
+Losers round 2
+inShane, Vivi
+p = 0.002197265625
+importance = 0.000244140625
+{inShane: 0.140625, PW | Vincessant: 0.515625, Stone Free: 0.109375, Leo: 0.234375}
+{Brooke: 0.609375, Scoop: 0.140625, Vivi: 0.015625, BulaclaFlocka: 0.234375}
+
+Losers round 6
+Wishh, AceOfFlakes
+p = 0.0116799306124
+importance = 0.000238365930866
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 6
+SG, Phatcat
+p = 0.0111474433342
+importance = 0.000227498843554
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 2
+Mr Clean, Gafter
+p = 0.00146484375
+importance = 0.000162760416667
+{Mr Clean: 0.046875, The Brig: 0.25, Darkseid: 0.703125}
+{Chibi: 0.1875, Mr Fluffles: 0.03125, Llama: 0.75, Gafter: 0.03125}
+
+Losers round 2
+Mr Clean, Mr Fluffles
+p = 0.00146484375
+importance = 0.000162760416667
+{Mr Clean: 0.046875, The Brig: 0.25, Darkseid: 0.703125}
+{Chibi: 0.1875, Mr Fluffles: 0.03125, Llama: 0.75, Gafter: 0.03125}
+
+Losers round 7
+Wenbo, PB&J (Gerg before Sweedish)
+p = 0.00697755161681
+importance = 0.000109024244013
+{Wenbo: 0.25, Sweedish Delight: 0.5625, Redd: 0.1875}
+{Fortune: 0.123655933308, Reqy: 0.00013072705201, PB&J (Gerg before Sweedish): 0.0279102064673, The Brig: 0.0278593708742, Kofi: 0.000126373254261, Wishh: 0.00723756384104, Gerg (PB&J before s0ft): 0.00654924590046, Cava: 0.0281032813405, Junebug: 0.0390417090921, Phatcat: 0.00654924590046, Lock: 0.123655933308, DJ: 0.00654924590046, Conn Man: 0.00654924590046, Bonny: 8.24011358418e-05, SG: 0.320342318971, AceOfFlakes: 0.275576079943, Darkseid: 8.11178117601e-05}
+
+Losers round 3
+Wishh, Leo
+p = 0.000961303710938
+importance = 6.00814819336e-05
+{Kofi: 0.25, Wishh: 0.75}
+{inShane: 0.102722167969, Stone Free: 0.00274658203125, Bonny: 0.587768554688, Brooke: 0.0274658203125, PW | Vincessant: 0.0280151367188, Cava: 0.25, Leo: 0.00128173828125}
+
+Losers round 6
+AceOfFlakes, SG
+p = 0.00255946979451
+importance = 5.22340774389e-05
+{Fortune: 0.378875251281, PB&J (Gerg before Sweedish): 0.0598011132315, The Brig: 0.0187173429877, Lock: 0.378875251281, Wishh: 0.072306840535, Cava: 0.0186215043068, AceOfFlakes: 0.072802696377}
+{Wenbo: 0.71484375, Sweedish Delight: 0.25, SG: 0.03515625}
+
+Losers round 6
+Junebug, Conn Man
+p = 0.00255790507845
+importance = 5.22021444581e-05
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 6
+Wishh, SG
+p = 0.00254203736256
+importance = 5.18783135216e-05
+{Fortune: 0.378875251281, PB&J (Gerg before Sweedish): 0.0598011132315, The Brig: 0.0187173429877, Lock: 0.378875251281, Wishh: 0.072306840535, Cava: 0.0186215043068, AceOfFlakes: 0.072802696377}
+{Wenbo: 0.71484375, Sweedish Delight: 0.25, SG: 0.03515625}
+
+Losers round 3
+Fortune, Vivi
+p = 0.00067138671875
+importance = 4.19616699219e-05
+{Lock: 0.5, Fortune: 0.5}
+{inShane: 0.0845947265625, Stone Free: 0.0384521484375, Vivi: 0.0013427734375, Leo: 0.0823974609375, Scoop: 0.0472412109375, Brooke: 0.357055664062, PW | Vincessant: 0.310180664062, BulaclaFlocka: 0.0787353515625}
+
+Losers round 6
+The Brig, Phatcat
+p = 0.00182526912624
+importance = 3.72503903315e-05
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 3
+AceOfFlakes, Chibi
+p = 0.000411987304688
+importance = 2.5749206543e-05
+{Reqy: 0.25, PB&J (Gerg before Sweedish): 0.5625, AceOfFlakes: 0.1875}
+{Chibi: 0.002197265625, Mr Clean: 0.027099609375, Darkseid: 0.5712890625, Llama: 0.1494140625, The Brig: 0.25}
+
+Losers round 6
+Bonny, AceOfFlakes
+p = 0.00113422739923
+importance = 2.31474979436e-05
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 3
+Bonny, Huckster
+p = 0.000320434570312
+importance = 2.00271606445e-05
+{Cava: 0.75, Bonny: 0.25}
+{Scoopy: 0.0280151367188, Firewater: 0.102722167969, Kofi: 0.587768554688, Wishh: 0.25, AAJ: 0.0274658203125, JPez: 0.00274658203125, Huckster: 0.00128173828125}
+
+Losers round 6
+Reqy, Lock
+p = 0.000807431791827
+importance = 1.64781998332e-05
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 6
+The Brig, SG
+p = 0.00065803158941
+importance = 1.34292161104e-05
+{Fortune: 0.378875251281, PB&J (Gerg before Sweedish): 0.0598011132315, The Brig: 0.0187173429877, Lock: 0.378875251281, Wishh: 0.072306840535, Cava: 0.0186215043068, AceOfFlakes: 0.072802696377}
+{Wenbo: 0.71484375, Sweedish Delight: 0.25, SG: 0.03515625}
+
+Losers round 4
+Reqy, AAJ
+p = 0.00032689422369
+importance = 1.30757689476e-05
+{PB&J (Gerg before Sweedish): 0.140625, Darkseid: 0.1181640625, Reqy: 0.1904296875, Hop: 0.0087890625, The Brig: 0.5419921875}
+{Scoopy: 0.00175094604492, AAJ: 0.00171661376953, Firewater: 0.00642013549805, Kofi: 0.18367767334, Wishh: 0.140625, Bonny: 0.119766235352, Cava: 0.546043395996}
+
+Losers round 5
+Lock, Llama
+p = 0.000377293035854
+importance = 1.0480362107e-05
+{Lock: 0.5, Fortune: 0.5}
+{Cava: 0.0744860172272, inShane: 0.000472673855256, Reqy: 0.0399221093685, PB&J (Gerg before Sweedish): 0.239204452926, The Brig: 0.0748693719506, Kofi: 0.0334960224573, Wishh: 0.28922736214, Bonny: 0.0513706676429, Llama: 0.000754586071707, Brooke: 0.000126383383758, Mr Clean: 0.00013686119928, Darkseid: 0.0501991879719, PW | Vincessant: 0.000128911051434, AceOfFlakes: 0.145605392754}
+
+Losers round 6
+Wishh, Phatcat
+p = 0.000474185217172
+importance = 9.67724933004e-06
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 5
+Fortune, inShane
+p = 0.000236336927628
+importance = 6.56491465634e-06
+{Lock: 0.5, Fortune: 0.5}
+{Cava: 0.0744860172272, inShane: 0.000472673855256, Reqy: 0.0399221093685, PB&J (Gerg before Sweedish): 0.239204452926, The Brig: 0.0748693719506, Kofi: 0.0334960224573, Wishh: 0.28922736214, Bonny: 0.0513706676429, Llama: 0.000754586071707, Brooke: 0.000126383383758, Mr Clean: 0.00013686119928, Darkseid: 0.0501991879719, PW | Vincessant: 0.000128911051434, AceOfFlakes: 0.145605392754}
+
+Losers round 5
+Fortune, Mr Clean
+p = 6.84305996401e-05
+importance = 1.90084999e-06
+{Lock: 0.5, Fortune: 0.5}
+{Cava: 0.0744860172272, inShane: 0.000472673855256, Reqy: 0.0399221093685, PB&J (Gerg before Sweedish): 0.239204452926, The Brig: 0.0748693719506, Kofi: 0.0334960224573, Wishh: 0.28922736214, Bonny: 0.0513706676429, Llama: 0.000754586071707, Brooke: 0.000126383383758, Mr Clean: 0.00013686119928, Darkseid: 0.0501991879719, PW | Vincessant: 0.000128911051434, AceOfFlakes: 0.145605392754}
+
+Losers round 6
+Reqy, DJ
+p = 7.30533525939e-05
+importance = 1.49088474681e-06
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 6
+Bonny, Phatcat
+p = 4.60476935586e-05
+importance = 9.39748848136e-07
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 6
+Darkseid, Conn Man
+p = 4.5330541866e-05
+importance = 9.25113099305e-07
+{Reqy: 0.00393719121348, PB&J (Gerg before Sweedish): 0.0255236495286, The Brig: 0.0983723992249, Kofi: 0.00380606506951, Wishh: 0.0255560874939, Cava: 0.0992336554918, Junebug: 0.13785762107, Bonny: 0.00248172832653, SG: 0.600788524956, Darkseid: 0.00244307762478}
+{Fortune: 0.205078125, PB&J (Gerg before Sweedish): 0.05859375, Gerg (PB&J before s0ft): 0.0185546875, Lock: 0.205078125, Phatcat: 0.0185546875, DJ: 0.0185546875, Conn Man: 0.0185546875, AceOfFlakes: 0.45703125}
+
+Losers round 4
+Mr Clean, inShane
+p = 1.08739477582e-05
+importance = 4.34957910329e-07
+{Reqy: 0.120681762695, PB&J (Gerg before Sweedish): 0.411849975586, The Brig: 0.12890625, Llama: 0.00933837890625, Mr Clean: 0.00169372558594, AceOfFlakes: 0.17578125, Darkseid: 0.151748657227}
+{inShane: 0.00642013549805, Kofi: 0.119766235352, Wishh: 0.546043395996, Bonny: 0.18367767334, Brooke: 0.00171661376953, PW | Vincessant: 0.00175094604492, Cava: 0.140625}
+
