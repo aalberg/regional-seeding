@@ -61,3 +61,4 @@ target/
 # Misc
 *.xlsx
 *.tio
+data/*_out_*
