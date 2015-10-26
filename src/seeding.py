@@ -1,9 +1,9 @@
 import sys
-import classes
-import bracket
-import annealing
-import util
 import random
+
+import annealing
+import player_data
+import util
 
 config = {
   "config_file": "../cfg/config.txt",
@@ -14,6 +14,8 @@ config = {
   #"player_out_file": "../data/test/players_out.txt",
   #"bracket_out_file": "../data/test/bracket_out.txt",
   "tolerance": 0,
+  "num_pools": 1,
+  "pool_type": util.PoolType.BRACKET,
   "num_spaces_per_round": 10,
   "use_advanced_bracket_seeding": True,
   "annealing_rounds": 1000,
@@ -45,22 +47,21 @@ config_types = {
 # Main.
 def main():
   util.LoadConfig(config, config_types)
-  player_map = classes.PlayerMap()
+  player_map = player_data.PlayerMap()
   util.LoadPlayers(config, player_map)
-  bracket_inst = bracket.Bracket(config)
   print ""
 
   random.seed(config["start_seed"])
   player_map.PadWithByes()
-  bracket_inst.BuildBracket(player_map)
-  players_str = bracket_inst.GetPlayersBySeedString()
-  util.WriteStr((players_str, config["player_out_file"]))
-  bracket_str = bracket_inst.GetBracketString()
-  util.WriteStr((bracket_str, config["bracket_out_file"]))
+  #bracket_inst.BuildBracket(player_map)
+  #players_str = bracket_inst.GetPlayersBySeedString()
+  #util.WriteStr((players_str, config["player_out_file"]))
+  #bracket_str = bracket_inst.GetBracketString()
+  #util.WriteStr((bracket_str, config["bracket_out_file"]))
   print "-"*60
 
   manager = annealing.AnnealingManager(config, player_map)
-  manager.RunSimulatedAnnealing(config, bracket_inst.GetAnnealingInit(), bracket_inst.SimulateBracket, None)
+  manager.RunSimulatedAnnealing()
 
   command = ""
   while not command == "quit":
@@ -76,16 +77,16 @@ def main():
       print "Command not found"
       continue
 
-    if command[1] == "bracket":
-      param = (bracket_inst.GetBracketString(), config["bracket_out_file"])
-    elif command[1] == "winners":
-      param = (bracket_inst.GetWinnersBracketString(), config["bracket_out_file"])
-    elif command[1] == "losers":
-      param = (bracket_inst.GetLosersBracketString(), config["bracket_out_file"])
-    elif command[1] == "prob":
-      param = (bracket_inst.GetProbabilisticBracketString(), config["probabilistic_bracket_out_file"])
-    elif command[1] == "seeds":
-      param = (bracket_inst.GetPlayersBySeedString(), config["player_out_file"])
+    #if command[1] == "bracket":
+    #  param = (bracket_inst.GetBracketString(), config["bracket_out_file"])
+    #elif command[1] == "winners":
+    #  param = (bracket_inst.GetWinnersBracketString(), config["bracket_out_file"])
+    #elif command[1] == "losers":
+    #  param = (bracket_inst.GetLosersBracketString(), config["bracket_out_file"])
+    #elif command[1] == "prob":
+    #  param = (bracket_inst.GetProbabilisticBracketString(), config["probabilistic_bracket_out_file"])
+    if command[1] == "seeds":
+      param = (round.GetPlayersBySeedString(), config["player_out_file"])
     elif command[1] == "players":
       param = (player_map.GetPlayersBySkillString(), None)
     elif command[1] == "conflicts":

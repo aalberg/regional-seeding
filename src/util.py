@@ -1,3 +1,8 @@
+# Pool type enum
+class PoolType:
+  BRACKET = 1
+  ROUND_ROBIN = 2
+
 # Load functions.
 def ParseConfigLine(line, config_types):
   split_line = line.split(' ', 1)

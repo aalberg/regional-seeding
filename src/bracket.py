@@ -1,24 +1,20 @@
-import classes
-import util
-import random
-import annealing
+import interfaces
 
 # Bracket class.
-class Bracket:
-  def __init__(self, config):
+class BracketPool(interfaces.Pool):
+  def __init__(self, config, players):
     self.config = config
-    self.players = []
+    self.players = players
+    self.num_players = len(self.players)
     self.rounds = -1
     self.matches = []
     self.losers_matches = []
     self.root = None
-    self.num_players = -1
+
+    self.BuildBracket()
 
   # Build and seed a bracket.
-  def BuildBracket(self, player_map):
-    self.player_map = player_map
-    self.players = player_map.GetPlayersBySkill()
-    self.num_players = len(self.players)
+  def BuildBracket(self):
     if self.num_players < 2:
       return
     self.BuildWinnersBracket()
@@ -27,7 +23,7 @@ class Bracket:
   # Build winners bracket.
   def BuildWinnersBracket(self):
     self.rounds = (self.num_players-1).bit_length()
-    self.root = classes.BracketMatch([self.players[0], self.players[1]], (1, 2), None, None, self.rounds, False)
+    self.root = BracketMatch([self.players[0], self.players[1]], (1, 2), None, None, self.rounds, False)
     self.matches.append([self.root])
 
     for round in xrange(1, self.rounds):
@@ -35,7 +31,7 @@ class Bracket:
       for match in xrange(0, 1<<round):
         next_match = self.matches[0][match/2]
         opponent_seed = self.GetOpponent(next_match, match%2, 1<<(round+1))
-        round_matches[match] = classes.BracketMatch([next_match.players[match%2], self.players[opponent_seed]],
+        round_matches[match] = BracketMatch([next_match.players[match%2], self.players[opponent_seed]],
                                                     (next_match.seeds[match%2], opponent_seed+1),
                                                     next_match, None, self.rounds - round, False)
         next_match.match_from[match%2] = round_matches[match]
@@ -55,7 +51,7 @@ class Bracket:
         if round == 0:
           match1 = self.matches[0][2*match]
           match2 = self.matches[0][2*match + 1]
-          round_matches[match] = classes.BracketMatch([match2.players[1], match1.players[1]],
+          round_matches[match] = BracketMatch([match2.players[1], match1.players[1]],
                                                       (match2.seeds[1], match1.seeds[1]), None, None, round, True)
           match1.loser_to = round_matches[match]
           match2.loser_to = round_matches[match]
@@ -63,7 +59,7 @@ class Bracket:
         elif round % 2 == 0:
           match1 = self.losers_matches[round-1][2*match]
           match2 = self.losers_matches[round-1][2*match + 1]
-          round_matches[match] = classes.BracketMatch([match1.players[0], match2.players[0]],
+          round_matches[match] = BracketMatch([match1.players[0], match2.players[0]],
                                                       (match1.seeds[0], match2.seeds[0]), None, None, round, True)
           match1.winner_to = round_matches[match]
           match2.winner_to = round_matches[match]
@@ -71,7 +67,7 @@ class Bracket:
         else:
           match1 = self.GetScrambledMatch(round, num_matches, match)
           match2 = self.losers_matches[round-1][match]
-          round_matches[match] = classes.BracketMatch([match1.players[1], match2.players[0]],
+          round_matches[match] = BracketMatch([match1.players[1], match2.players[0]],
                                                       (match1.seeds[1], match2.seeds[0]), None, None, round, True)
           match1.loser_to = round_matches[match]
           match2.winner_to = round_matches[match]
@@ -133,7 +129,7 @@ class Bracket:
   def GetEligiblePlayer(self, match):
     skill_diff = -1
     closest_player = None
-    for new_player in self.player_map.GetPlayersWithinSkill(match.players[1].skill, self.config["tolerance"]):
+    for new_player in self.players:
       new_skill_diff = abs(match.players[1].skill - new_player.skill)
       if not new_player.is_bye and \
          not new_player.region == match.players[1].region and \
@@ -143,26 +139,22 @@ class Bracket:
 
     return skill_diff, closest_player
 
-  # Simulate the bracket and calculate the number of conflicts.
-  def SimulateBracket(self, param, new_players):
-    if not new_players == None:
-      self.LoadSeeds(new_players)
-    e_conflicts, e_importance = 0.0, 0.0
-    conflicts = annealing.ConflictSet()
-    for arr in [self.matches, self.losers_matches]:
-      for round in arr:
-        for match in round:
-          incrementals = match.CalculatePlayerProbabilities(conflicts)
-          e_conflicts += incrementals[0]
-          e_importance += incrementals[1]
-    return e_conflicts, e_importance, conflicts
+  # Load/save the current seeding.
+  def SetSeeds(self, new_seeds):
+    self.players = list(new_seeds)
+    i = 0
+    for match in self.matches[0]:
+      for j in xrange(0, 2):
+        match.players[j] = new_seeds[i]
+        i += 1
 
-  def SaveSeeds(self):
+  def GetSeeds(self):
     seeds = []
     for match in self.matches[0]:
       for player in match.players:
         seeds.append(player)
     error = False
+    # Debug verification
     for i in xrange(0, len(self.players)-1):
       for j in xrange(i+1, len(self.players)):
         if self.players[i] == self.players[j]:
@@ -173,16 +165,15 @@ class Bracket:
       None.hi
     return seeds
 
-  def LoadSeeds(self, new_seeds):
-    self.players = list(new_seeds)
-    i = 0
-    for match in self.matches[0]:
-      for j in xrange(0, 2):
-        match.players[j] = new_seeds[i]
-        i += 1
+  def GetSortedSeeds(self):
+    return list(self.players)
 
-  def GetAnnealingInit(self):
-    return list(self.players), self.SaveSeeds()
+  # Simulate the bracket and calculate the number of conflicts.
+  def Simulate(self, conflicts):
+    for arr in [self.matches, self.losers_matches]:
+      for round in arr:
+        for match in round:
+          match.CalculatePlayerProbabilities(conflicts)
 
   # Seeding util functions
   def GetOpponent(self, bracket_match, player, bracket_size):
@@ -235,3 +226,119 @@ class Bracket:
     for player in self.players:
       str_out += player.name + "\n"
     return str_out
+
+# Single bracket match.
+class BracketMatch:
+  def __init__(self, new_players=[None, None], new_seeds=(-1, -1), new_winner_to=None, new_loser_to=None,
+               new_round=-1, new_losers=False):
+    self.players = new_players
+    self.seeds = new_seeds
+    self.initial_skill = (-1, -1)
+    if (self.players[0] != None):
+      self.initial_skill = self.players[0].skill
+    if (self.players[1] != None):
+      self.initial_skill = self.players[1].skill
+
+    self.winner_to = new_winner_to
+    self.loser_to = new_loser_to
+    self.match_from = [None, None]
+
+    self.round = new_round
+    self.losers = new_losers
+
+    self.p_players = [{}, {}]
+
+  # Calculate the probabilities of players reaching the current match
+  def CalculatePlayerProbabilities(self, conflicts):
+    e_conflicts, e_score = 0.0, 0.0
+    self.p_players = [{}, {}]
+    if self.match_from[0] == None:
+      self.p_players[0][self.players[0]] = 1.0
+      self.p_players[1][self.players[1]] = 1.0
+    else:
+      # Loop over matches leading into this one and determine who advances/falls to losers.
+      for prev_index in xrange(0, 2):
+        prev_match = self.match_from[prev_index]
+        for side in xrange(0, 2):
+          for player, p1 in prev_match.p_players[side].iteritems():
+            p = 0.0
+            for opponent, p2 in prev_match.p_players[1-side].iteritems():
+              p += p1 * p2 * player.p_win(opponent)
+              if prev_match.losers == self.losers and \
+                 player.region == opponent.region and not player.name == opponent.name:
+                e_conflicts += p1 * p2 / 2
+                conflict = BracketConflict(prev_match, player, opponent, p1 * p2,
+                                           prev_match.round, prev_match.losers)
+                conflicts.AddConflict(conflict)
+                e_score += conflict.score / 2
+
+            # Add the probabilities to the dict for this match.
+            if self.losers and not prev_match.losers:
+              if p1-p > 0:
+                self.p_players[prev_index][player] = p1-p
+            elif p > 0:
+              # Special case: a player reaches a match from winners and losers.
+              if player in self.p_players[prev_index]:
+                self.p_players[prev_index][player] += p
+              else:
+                self.p_players[prev_index][player] = p
+    return e_conflicts, e_score
+
+  # String output functions.
+  def PrettyString(self, depth=0, spaces_per_round=0):
+    return " "*(spaces_per_round*depth) + str(self.seeds[0]) + " " + self.players[0].name + "\n" + \
+           " "*(spaces_per_round*depth) + str(self.seeds[1]) + " " + self.players[1].name
+
+  def ProbabilityString(self, depth=0, spaces_per_round=0):
+    return " "*(spaces_per_round*depth) + self.PrettifyProbMap(self.p_players[0]) + "\n" + \
+           " "*(spaces_per_round*depth) + self.PrettifyProbMap(self.p_players[1])
+
+  def PrettifyProbMap(self, map):
+    count = len(map) - 1
+    str_out = "{"
+    for player, p in map.iteritems():
+      str_out += player.name + ": " + str(p)
+      if count > 0:
+        str_out += ", "
+      count -= 1
+    return str_out + "}"
+
+  def __repr__(self):
+    return str(self.seeds[0]) + " " + self.players[0].name + " vs " + \
+           str(self.seeds[1]) + " " + self.players[1].name
+
+# Bracket conflict struct.
+class BracketConflict(interfaces.Conflict):
+  def __init__(self, match, player1, player2, p, round, losers=False):
+    self.match = match
+    self.p_map = match.p_players
+    self.player1 = player1
+    self.player2 = player2
+    self.p = p
+    self.round = round
+    self.losers = losers
+    self.score = self.Calculatescore()
+
+  def Calculatescore(self):
+    return self.p / ((self.round + 1)**2)
+
+  def __hash__(self):
+    return hash((tuple(sorted([self.player1.name, self.player2.name])), self.round, self.losers))
+
+  def __eq__(self, other):
+    return self.match == other.match and (self.player1 == other.player1 and self.player2 == other.player2 or \
+           self.player1 == other.player2 and self.player2 == other.player1)
+
+  def __str__(self):
+    str_out = ""
+    if self.losers:
+      str_out += "Losers"
+    else:
+      str_out += "Winners"
+    str_out += " round " + str(self.round) + "\n" + self.player1.name + ", " + self.player2.name + \
+               "\np = " + str(self.p) + "\nscore = " + str(self.score) + "\n" + \
+               self.match.PrettifyProbMap(self.p_map[0]) + "\n" + self.match.PrettifyProbMap(self.p_map[1])
+    return str_out
+
+  def __repr__(self):
+    return self.__str__()
