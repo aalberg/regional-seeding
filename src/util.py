@@ -1,3 +1,5 @@
+import os
+
 # Pool type enum
 class PoolType:
   BRACKET = 1
@@ -59,8 +61,13 @@ def WriteStr(param):
   if filepath == None:
     return
   try:
+    if not os.path.exists(os.path.dirname(filepath)):
+      os.makedirs(os.path.dirname(filepath))
     with open(filepath, "w") as f:
       f.write(str_out)
     print "Wrote to: " + filepath
   except IOError:
     print "File not found: " + filepath + " Skipping."
+
+if __name__ == "__main__":
+  print "Run seeding.py"

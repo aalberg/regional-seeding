@@ -153,16 +153,6 @@ class BracketPool(interfaces.Pool):
     for match in self.matches[0]:
       for player in match.players:
         seeds.append(player)
-    error = False
-    # Debug verification
-    for i in xrange(0, len(self.players)-1):
-      for j in xrange(i+1, len(self.players)):
-        if self.players[i] == self.players[j]:
-          print "ERROR", self.players[i], self.players[j]
-          print self.players
-          error = True
-    if error:
-      None.hi
     return seeds
 
   def GetSortedSeeds(self):
@@ -195,10 +185,10 @@ class BracketPool(interfaces.Pool):
     return None
 
   # Print utils
-  def GetBracketString(self):
+  def GetPoolString(self):
     return self.GetWinnersBracketString(0) + "\n" + ("-"*60) + "\n" + self.GetLosersBracketString(0)
 
-  def GetProbabilisticBracketString(self):
+  def GetDebugString(self):
     return self.GetWinnersBracketString(1) + "\n" + ("-"*60) + "\n" + self.GetLosersBracketString(1)
 
   def GetWinnersBracketString(self, type=0):
@@ -342,3 +332,6 @@ class BracketConflict(interfaces.Conflict):
 
   def __repr__(self):
     return self.__str__()
+
+if __name__ == "__main__":
+  print "Run seeding.py"

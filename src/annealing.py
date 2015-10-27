@@ -9,12 +9,11 @@ class AnnealingManager:
   def __init__(self, config, player_map):
     self.config = config
     self.player_map = player_map
-    self.conflicts = None
 
   def RunSimulatedAnnealing(self):
-    round = Round(self.config, self.config["num_pools"], self.config["pool_type"], self.player_map)
-    round.Simulate()
-    s = AnnealingState(round.conflicts.score, round.players, round.conflicts)
+    self.round = Round(self.config, self.config["num_pools"], self.config["pool_type"], self.player_map)
+    self.round.Simulate()
+    s = AnnealingState(self.round.conflicts.score, self.round.players, self.round.conflicts)
     s_cur = s
     print "Best score: " + str(s.score)
 
@@ -25,10 +24,10 @@ class AnnealingManager:
 
       # Generate the new state.
       s_new = s_cur.GetNewState(self.player_map, self.config["tolerance"])
-      round.SetSeeds(s_new.seeds)
-      round.Simulate()
-      s_new.score = round.conflicts.score
-      s_new.conflicts = round.conflicts
+      self.round.SetSeeds(s_new.seeds)
+      self.round.Simulate()
+      s_new.score = self.round.conflicts.score
+      s_new.conflicts = self.round.conflicts
 
       # Possibly advance to the new state
       if self.P(s_cur.score, s_new.score, T) >= random.random():
@@ -40,8 +39,10 @@ class AnnealingManager:
           if s.score < self.config["annealing_goal"]:
             break
 
+    self.round.SetSeeds(s.seeds)
+    self.round.Simulate()
+    self.round.VerifyPlayers()
     print "Done simulated annealing"
-    self.conflicts = s.conflicts
 
   def Temperature(self, i, k):
     return 1 - (float(i)/k)
@@ -60,7 +61,6 @@ class Round:
     self.players_per_pool = self.num_players / self.num_pools
 
     pool_players = [[] for i in xrange(self.num_pools)]
-    print pool_players, self.num_pools
     for i in xrange(0, self.num_players):
       j = i % self.num_pools
       if j > (self.num_pools / 2) - 1:
@@ -77,8 +77,22 @@ class Round:
     self.players = []
     for pool in self.pools:
       self.players.extend(pool.GetSeeds())
-      
+
     self.need_simulation = True
+
+    self.VerifyPlayers()
+
+  def VerifyPlayers(self):
+    # Debug verification
+    error = False
+    for i in xrange(0, len(self.players)-1):
+      for j in xrange(i+1, len(self.players)):
+        if self.players[i] == self.players[j]:
+          print "ERROR", self.players[i], self.players[j]
+          print self.players
+          error = True
+    if error:
+      None.hi
 
   def SetSeeds(self, seeds):
     for i in xrange(0, self.num_pools):
@@ -96,6 +110,23 @@ class Round:
     for pool in self.pools:
       pool.Simulate(self.conflicts)
     self.need_simulation = False
+
+  def WritePools(self, function, file_prefix="", debug = False):
+    for i in xrange(0, self.num_pools):
+      path = file_prefix + str(i + 1) + ".txt"
+      if not debug:
+        function((self.pools[i].GetPoolString(), path))
+      else:
+        function((self.pools[i].GetDebugString(), path))
+
+  def WriteConflicts(self, function, file):
+    function((self.conflicts.GetConflictsString(), file))
+
+  def WritePoolSeeds(self, function, file_prefix=""):
+    self.VerifyPlayers()
+    for i in xrange(0, self.num_pools):
+      pool_str = '\n'.join([player.name for player in self.pools[i].GetSortedSeeds()])
+      function((pool_str, file_prefix + str(i + 1) + ".txt"))
 
 class AnnealingState:
   def __init__(self, score, seeds, conflicts):
@@ -165,3 +196,6 @@ class ConflictSet:
            "\nConflict score (filtered): " + str(e_importance_filtered) + \
            "\nExpected conflicts: " + str(self.e_conflicts) + \
            "\nExpected conflicts (filtered): " + str(e_conflicts_filtered) + "\n" + str_conflicts
+
+if __name__ == "__main__":
+  print "Run seeding.py"

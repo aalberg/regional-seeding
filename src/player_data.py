@@ -100,3 +100,6 @@ class Player:
 
   def __hash__(self):
     return hash(self.name)
+
+if __name__ == "__main__":
+  print "Run seeding.py"
