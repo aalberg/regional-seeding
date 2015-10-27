@@ -3,7 +3,11 @@ Regional tournament bracket seeding program
 
 ### Requirements
 Python 2.7
+
 Python 3 not supported
+
+### Note
+Round Robin pools are still under construction and likely do not work.
 
 ### Quick Start
 Edit `cfg/config.txt`.
