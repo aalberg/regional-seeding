@@ -61,5 +61,4 @@ target/
 # Misc
 *.xlsx
 *.tio
-data/**/*_out_*
-data\\ss18\\conflicts_out_ss18_1.txt
+data/**
