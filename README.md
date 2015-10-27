@@ -43,6 +43,28 @@ player2,score2,region2
 ```
 csv format can be easily generated with Excel or a comparable program.
 
+### Suggested Player Skill
+Credit to Tom Georgen
+```
+10 tends to be whoever the best expected winners are, usually no more than 4
+
+9 is the great players right below them
+
+8 is really good players, like 8-12 on PR
+
+7 is for the rest of the PR
+
+6 is for borderline PR
+
+5 is for people I know to be solid (I would probably fall here)
+
+4 is for generally competent up and comers
+
+3 is for less good players that can at least L cancel
+
+2 or lower is total noob
+```
+
 ### Command Line Output
 Several types of output are available from the built in command line. There are two main output commands: `print` and `write`. `print` will cause the desired output to be printed to the console. `write` will write the desired output to a file specified in the configuration options. Using `print` is not recommended, as the output may be large and some consoles (Windows command prompt) do not allow copying of output text.
 
