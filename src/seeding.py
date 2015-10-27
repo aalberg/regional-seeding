@@ -16,7 +16,6 @@ config = {
   "num_pools": 1,
   "pool_type": util.PoolType.BRACKET,
   "num_spaces_per_round": 10,
-  "use_advanced_bracket_seeding": True,
   "annealing_rounds": 1000,
   "annealing_goal": -1.0,
   # Currently unused
@@ -37,7 +36,6 @@ config_types = {
   "num_pools": "int",
   "pool_type": "int",
   "num_spaces_per_round": "int",
-  "use_advanced_bracket_seeding": "bool",
   "annealing_rounds": "int",
   "annealing_goal": "float",
   # Currently unused

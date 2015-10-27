@@ -52,16 +52,35 @@ players   Lists the players in the order they were read, before any seeding has 
 ### Configuration
 Edit `config.txt` in cfg to change the configuration of the program. To set the value of a configuration option, enter a line in `config.txt` with the name of the option followed by the new value, separated by a single space
 
-"config_file": "../cfg/config.txt",
-"player_in_file": "../data/ss18/players_in_ss18_1.txt",
-"pools_out_file_header": "../data/ss18/output/pool_",
-"debug_out_file_header": "../data/ss18/output/debug_",
-"conflicts_out_file": "../data/ss18/output/conflicts.txt",
-"seeds_out_file_header": "../data/ss18/output/seeds_",
-"tolerance": 0,
-"num_pools": 1,
-"pool_type": util.PoolType.BRACKET,
-"num_spaces_per_round": 10,
-"use_advanced_bracket_seeding": True,
-"annealing_rounds": 1000,
-"annealing_goal": -1.0,
+The full set of configuration options is listed below. All paths are relative to seeding.py
+```
+config_file             The location of the config file.
+player_in_file          The location of the player input file.
+pools_out_file_header   The header of the pool output files.
+debug_out_file_header   The header of the pool debug info output files.
+conflicts_out_file      The location of the conflict output file.
+seeds_out_file_header   The header of the seeds output files.
+tolerance               Skill tolerance when swapping players. The range is inclusive.
+num_pools               Number of pools
+pool_type               1 for bracket pools, 2 for round robin
+num_spaces_per_round    Spaces per bracket round for indenting bracket matches in output files.
+annealing_rounds        Number of simulated annealing rounds to output.
+annealing_goal          Goal of annealing. If the cumulative conflict score drops below this, annealing will stop.
+```
+
+Default settings:
+```
+config_file             ../cfg/config.txt
+player_in_file          ../data/ss18/players_in_ss18_1.txt
+pools_out_file_header   ../data/ss18/output/pool_
+debug_out_file_header   ../data/ss18/output/debug_
+conflicts_out_file      ../data/ss18/output/conflicts.txt
+seeds_out_file_header   ../data/ss18/output/seeds_
+tolerance               0
+num_pools               1
+pool_type               1
+num_spaces_per_round    10
+use_advanced_bracket_seeding  True
+annealing_rounds        1000
+annealing_goal          -1.0
+```
