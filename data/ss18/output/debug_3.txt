@@ -1,0 +1,60 @@
+{s0ft: 1.0}
+{bye10: 1.0}
+          {s0ft: 1.0}
+          {Mr Clean: 0.75, Skid: 0.25}
+{Mr Clean: 1.0}
+{Skid: 1.0}
+                    {s0ft: 1.0}
+                    {Conn Man: 0.75, Bonny: 0.25}
+{Conn Man: 1.0}
+{Mario: 1.0}
+          {Conn Man: 1.0}
+          {Bonny: 1.0}
+{Bonny: 1.0}
+{Mr Fluffles: 1.0}
+                              {s0ft: 1.0}
+                              {Fortune: 0.8125, The Brig: 0.1875}
+{Fortune: 1.0}
+{bye7: 1.0}
+          {Fortune: 1.0}
+          {Stone Free: 0.25, Llama: 0.75}
+{Llama: 1.0}
+{Stone Free: 1.0}
+                    {Fortune: 1.0}
+                    {Kofi: 0.25, The Brig: 0.75}
+{The Brig: 1.0}
+{bye2: 1.0}
+          {The Brig: 1.0}
+          {Kofi: 1.0}
+{Kofi: 1.0}
+{Cogzilla: 1.0}
+
+------------------------------------------------------------
+                                                  {Fortune: 0.8125, The Brig: 0.1875}
+                                                  {Fortune: 0.145469605923, The Brig: 0.310884551189, Kofi: 0.0892805809272, Bonny: 0.086841468059, Llama: 0.000836500315927, Conn Man: 0.365999049449, Mr Clean: 0.000688244137564}
+                              {Conn Man: 0.75, Bonny: 0.25}
+                              {Kofi: 0.5712890625, Mr Clean: 0.027099609375, Stone Free: 0.002197265625, Llama: 0.1494140625, The Brig: 0.25}
+          {Kofi: 0.75, The Brig: 0.25}
+          {Mr Clean: 0.25, Skid: 0.75}
+{bye10: 1.0}
+{Mr Clean: 0.25, Skid: 0.75}
+                    {Kofi: 0.703125, Mr Clean: 0.046875, The Brig: 0.25}
+                    {Mario: 0.03125, Stone Free: 0.1875, Llama: 0.75, Mr Fluffles: 0.03125}
+          {Stone Free: 0.25, Llama: 0.75}
+          {Mario: 0.5, Mr Fluffles: 0.5}
+{Mario: 1.0}
+{Mr Fluffles: 1.0}
+                                        {The Brig: 0.140625, Kofi: 0.178527832031, Bonny: 0.120681762695, Llama: 0.00933837890625, Conn Man: 0.549133300781, Mr Clean: 0.00169372558594}
+                                        {Fortune: 0.17578125, The Brig: 0.407215118408, Kofi: 0.118804931641, Bonny: 0.160503387451, Llama: 0.00178527832031, Mr Clean: 0.00700378417969, Conn Man: 0.12890625}
+                              {Kofi: 0.25, Fortune: 0.1875, The Brig: 0.5625}
+                              {Mr Clean: 0.112060546875, Cogzilla: 0.003662109375, Bonny: 0.604248046875, Llama: 0.028564453125, Conn Man: 0.25, Skid: 0.00146484375}
+          {Conn Man: 0.25, Bonny: 0.75}
+          {Stone Free: 0.75, Llama: 0.25}
+{bye7: 1.0}
+{Stone Free: 0.75, Llama: 0.25}
+                    {Conn Man: 0.25, Llama: 0.046875, Bonny: 0.703125}
+                    {Mr Clean: 0.5625, Cogzilla: 0.3125, Skid: 0.125}
+          {Mr Clean: 0.75, Skid: 0.25}
+          {Cogzilla: 1.0}
+{bye2: 1.0}
+{Cogzilla: 1.0}

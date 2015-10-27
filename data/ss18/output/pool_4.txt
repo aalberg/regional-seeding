@@ -1,0 +1,60 @@
+1 Sweedish Delight
+16 bye9
+          1 Sweedish Delight
+          8 Brooke
+8 Brooke
+9 Scoop
+                    1 Sweedish Delight
+                    4 Gerg (PB&J before s0ft)
+4 Gerg (PB&J before s0ft)
+13 Gafter
+          4 Gerg (PB&J before s0ft)
+          5 Reqy
+5 Reqy
+12 Kdot
+                              1 Sweedish Delight
+                              2 Wenbo
+2 Wenbo
+15 bye8
+          2 Wenbo
+          7 inShane
+7 inShane
+10 Doiddlebod
+                    2 Wenbo
+                    3 Phatcat
+3 Phatcat
+14 bye1
+          3 Phatcat
+          6 Darkseid
+6 Darkseid
+11 Leo
+
+------------------------------------------------------------
+                                                  2 Wenbo
+                                                  4 Gerg (PB&J before s0ft)
+                              4 Gerg (PB&J before s0ft)
+                              6 Darkseid
+          6 Darkseid
+          9 bye9
+9 bye9
+16 Scoop
+                    6 Darkseid
+                    7 inShane
+          7 inShane
+          12 Gafter
+12 Gafter
+13 Kdot
+                                        4 Gerg (PB&J before s0ft)
+                                        3 Phatcat
+                              3 Phatcat
+                              5 Reqy
+          5 Reqy
+          10 bye8
+10 bye8
+15 Doiddlebod
+                    5 Reqy
+                    8 Brooke
+          8 Brooke
+          11 bye1
+11 bye1
+14 Leo

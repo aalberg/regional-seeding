@@ -1,0 +1,60 @@
+{The Moon: 1.0}
+{bye11: 1.0}
+          {The Moon: 1.0}
+          {JL: 0.25, Hop: 0.75}
+{Hop: 1.0}
+{JL: 1.0}
+                    {The Moon: 1.0}
+                    {DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+{PB&J (Gerg before Sweedish): 1.0}
+{Vivi: 1.0}
+          {PB&J (Gerg before Sweedish): 1.0}
+          {DJ: 1.0}
+{DJ: 1.0}
+{Baby: 1.0}
+                              {The Moon: 1.0}
+                              {Cava: 0.25, AceOfFlakes: 0.75}
+{AceOfFlakes: 1.0}
+{bye6: 1.0}
+          {AceOfFlakes: 1.0}
+          {Chibi: 0.25, Scoopy: 0.75}
+{Scoopy: 1.0}
+{Chibi: 1.0}
+                    {AceOfFlakes: 1.0}
+                    {Cava: 1.0}
+{Cava: 1.0}
+{bye3: 1.0}
+          {Cava: 1.0}
+          {Huckster: 0.25, AAJ: 0.75}
+{AAJ: 1.0}
+{Huckster: 1.0}
+
+------------------------------------------------------------
+                                                  {AceOfFlakes: 0.75, Cava: 0.25}
+                                                  {Cava: 0.1875, DJ: 0.3359375, PB&J (Gerg before Sweedish): 0.3359375, AceOfFlakes: 0.140625}
+                              {DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+                              {Scoopy: 0.439453125, Vivi: 0.002685546875, AAJ: 0.298095703125, JL: 0.076904296875, Baby: 0.002685546875, Hop: 0.081298828125, Chibi: 0.06298828125, Huckster: 0.035888671875}
+          {AAJ: 0.75, Huckster: 0.25}
+          {JL: 0.75, Hop: 0.25}
+{bye11: 1.0}
+{JL: 0.75, Hop: 0.25}
+                    {JL: 0.234375, Huckster: 0.109375, Hop: 0.140625, AAJ: 0.515625}
+                    {Chibi: 0.1875, Vivi: 0.03125, Scoopy: 0.75, Baby: 0.03125}
+          {Chibi: 0.25, Scoopy: 0.75}
+          {Vivi: 0.5, Baby: 0.5}
+{Vivi: 1.0}
+{Baby: 1.0}
+                                        {DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+                                        {AceOfFlakes: 0.1875, DJ: 0.21875, PB&J (Gerg before Sweedish): 0.21875, Cava: 0.375}
+                              {Cava: 0.75, AceOfFlakes: 0.25}
+                              {DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+          {DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+          {Chibi: 0.75, Scoopy: 0.25}
+{bye6: 1.0}
+{Chibi: 0.75, Scoopy: 0.25}
+                    {DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+                    {JL: 0.109375, Huckster: 0.234375, Hop: 0.515625, AAJ: 0.140625}
+          {JL: 0.25, Hop: 0.75}
+          {AAJ: 0.25, Huckster: 0.75}
+{bye3: 1.0}
+{Huckster: 0.75, AAJ: 0.25}

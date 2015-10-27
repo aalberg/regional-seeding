@@ -1,0 +1,60 @@
+{Sweedish Delight: 1.0}
+{bye9: 1.0}
+          {Sweedish Delight: 1.0}
+          {Brooke: 0.75, Scoop: 0.25}
+{Brooke: 1.0}
+{Scoop: 1.0}
+                    {Sweedish Delight: 1.0}
+                    {Reqy: 0.25, Gerg (PB&J before s0ft): 0.75}
+{Gerg (PB&J before s0ft): 1.0}
+{Gafter: 1.0}
+          {Gerg (PB&J before s0ft): 1.0}
+          {Reqy: 1.0}
+{Reqy: 1.0}
+{Kdot: 1.0}
+                              {Sweedish Delight: 1.0}
+                              {Wenbo: 1.0}
+{Wenbo: 1.0}
+{bye8: 1.0}
+          {Wenbo: 1.0}
+          {inShane: 0.75, Doiddlebod: 0.25}
+{inShane: 1.0}
+{Doiddlebod: 1.0}
+                    {Wenbo: 1.0}
+                    {Phatcat: 0.75, Darkseid: 0.25}
+{Phatcat: 1.0}
+{bye1: 1.0}
+          {Phatcat: 1.0}
+          {Darkseid: 1.0}
+{Darkseid: 1.0}
+{Leo: 1.0}
+
+------------------------------------------------------------
+                                                  {Wenbo: 0.75, Sweedish Delight: 0.25}
+                                                  {inShane: 0.000761586925364, Reqy: 0.102028431618, Gerg (PB&J before s0ft): 0.39822946793, Phatcat: 0.397232390911, Brooke: 0.000710989872459, Darkseid: 0.101037132743}
+                              {Reqy: 0.25, Gerg (PB&J before s0ft): 0.75}
+                              {inShane: 0.121398925781, Doiddlebod: 0.00164794921875, Kdot: 0.00274658203125, Phatcat: 0.25, Brooke: 0.0281982421875, Darkseid: 0.596008300781}
+          {Phatcat: 0.25, Darkseid: 0.75}
+          {Brooke: 0.25, Scoop: 0.75}
+{bye9: 1.0}
+{Brooke: 0.25, Scoop: 0.75}
+                    {Brooke: 0.046875, Phatcat: 0.25, Darkseid: 0.703125}
+                    {Kdot: 0.234375, inShane: 0.609375, Doiddlebod: 0.140625, Gafter: 0.015625}
+          {inShane: 0.75, Doiddlebod: 0.25}
+          {Kdot: 0.75, Gafter: 0.25}
+{Gafter: 1.0}
+{Kdot: 1.0}
+                                        {inShane: 0.00758743286133, Reqy: 0.119274139404, Gerg (PB&J before s0ft): 0.544498443604, Phatcat: 0.140625, Brooke: 0.00176239013672, Darkseid: 0.186252593994}
+                                        {inShane: 0.00178527832031, Reqy: 0.188827514648, Gerg (PB&J before s0ft): 0.140625, Phatcat: 0.542953491211, Brooke: 0.00700378417969, Darkseid: 0.118804931641}
+                              {Phatcat: 0.75, Darkseid: 0.25}
+                              {inShane: 0.028564453125, Reqy: 0.604248046875, Gerg (PB&J before s0ft): 0.25, Leo: 0.003662109375, Scoop: 0.00146484375, Brooke: 0.112060546875}
+          {Reqy: 0.75, Gerg (PB&J before s0ft): 0.25}
+          {inShane: 0.25, Doiddlebod: 0.75}
+{bye8: 1.0}
+{inShane: 0.25, Doiddlebod: 0.75}
+                    {inShane: 0.046875, Reqy: 0.703125, Gerg (PB&J before s0ft): 0.25}
+                    {Brooke: 0.5625, Scoop: 0.125, Leo: 0.3125}
+          {Brooke: 0.75, Scoop: 0.25}
+          {Leo: 1.0}
+{bye1: 1.0}
+{Leo: 1.0}

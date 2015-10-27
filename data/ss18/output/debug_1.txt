@@ -1,0 +1,60 @@
+{Redd: 1.0}
+{bye12: 1.0}
+          {Redd: 1.0}
+          {Yin: 0.5, BulaclaFlocka: 0.5}
+{Yin: 1.0}
+{BulaclaFlocka: 1.0}
+                    {Redd: 1.0}
+                    {Junebug: 0.5, Wishh: 0.5}
+{Junebug: 1.0}
+{ECK: 1.0}
+          {Junebug: 1.0}
+          {Wishh: 1.0}
+{Wishh: 1.0}
+{Litany: 1.0}
+                              {Redd: 1.0}
+                              {Lock: 0.5, SG: 0.5}
+{Lock: 1.0}
+{bye5: 1.0}
+          {Lock: 1.0}
+          {PW | Vincessant: 0.75, 229: 0.25}
+{PW | Vincessant: 1.0}
+{229: 1.0}
+                    {Lock: 1.0}
+                    {SG: 1.0}
+{SG: 1.0}
+{bye4: 1.0}
+          {SG: 1.0}
+          {Firewater: 0.75, JPez: 0.25}
+{Firewater: 1.0}
+{JPez: 1.0}
+
+------------------------------------------------------------
+                                                  {Lock: 0.5, SG: 0.5}
+                                                  {Junebug: 0.21875, Wishh: 0.21875, SG: 0.28125, Lock: 0.28125}
+                              {Junebug: 0.5, Wishh: 0.5}
+                              {BulaclaFlocka: 0.05126953125, Firewater: 0.3251953125, Yin: 0.05126953125, ECK: 0.00341796875, Litany: 0.00341796875, JPez: 0.041015625, 229: 0.0673828125, PW | Vincessant: 0.45703125}
+          {Firewater: 0.75, JPez: 0.25}
+          {Yin: 0.5, BulaclaFlocka: 0.5}
+{bye12: 1.0}
+{Yin: 0.5, BulaclaFlocka: 0.5}
+                    {Firewater: 0.5625, JPez: 0.125, BulaclaFlocka: 0.15625, Yin: 0.15625}
+                    {PW | Vincessant: 0.75, ECK: 0.03125, Litany: 0.03125, 229: 0.1875}
+          {PW | Vincessant: 0.75, 229: 0.25}
+          {ECK: 0.5, Litany: 0.5}
+{ECK: 1.0}
+{Litany: 1.0}
+                                        {Junebug: 0.5, Wishh: 0.5}
+                                        {Lock: 0.375, Wishh: 0.125, SG: 0.375, Junebug: 0.125}
+                              {Lock: 0.5, SG: 0.5}
+                              {Junebug: 0.5, Wishh: 0.5}
+          {Junebug: 0.5, Wishh: 0.5}
+          {PW | Vincessant: 0.25, 229: 0.75}
+{bye5: 1.0}
+{PW | Vincessant: 0.25, 229: 0.75}
+                    {Junebug: 0.5, Wishh: 0.5}
+                    {Firewater: 0.1875, JPez: 0.375, Yin: 0.21875, BulaclaFlocka: 0.21875}
+          {Yin: 0.5, BulaclaFlocka: 0.5}
+          {Firewater: 0.25, JPez: 0.75}
+{bye4: 1.0}
+{Firewater: 0.25, JPez: 0.75}

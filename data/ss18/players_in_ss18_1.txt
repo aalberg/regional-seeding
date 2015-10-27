@@ -1,0 +1,52 @@
+Redd,10,RVA
+The Moon,10,NY
+s0ft,9,GA
+Sweedish Delight,9,NY
+Wenbo,8,UMD Alum
+AceOfFlakes,7,UMD
+Fortune,7,Nova
+Lock,7,MD
+SG,7,UMD
+Cava,6,Moco
+Conn Man,6,Cville
+DJ,6,MD
+Gerg (PB&J before s0ft),6,DE
+Junebug,6,Cville
+PB&J (Gerg before Sweedish),6,UMD Alum
+Phatcat,6,UMD
+The Brig,6,UMD
+Wishh,6,UMD
+Bonny,5,UMD
+Darkseid,5,Cville
+Kofi,5,Philly
+Reqy,5,MD
+AAJ,4,MD
+Brooke,4,DE
+Firewater,4,Nova
+Hop,4,DC
+inShane,4,Nova
+Llama,4,MD
+Mr Clean,4,Nova
+PW | Vincessant,4,Philly
+Scoopy,4,Nova
+229,3,Nova
+BulaclaFlocka,3,DC
+Chibi,3,UMD
+Cogzilla,3,UMD
+Doiddlebod,3,UMD
+Huckster,3,UMD
+JL,3,Nova
+JPez,3,MD
+Kdot,3,NY
+Leo,3,UMD
+Scoop,3,Nova
+Skid,3,Fluff
+Stone Free,3,DE
+Yin,3,Philly
+Baby,2,DC
+ECK,2,Moco
+Gafter,2,Nova
+Litany,2,Nova
+Mario,2,Nova
+Mr Fluffles,2,Nova
+Vivi,2,Nova

@@ -46,7 +46,7 @@ pools     Print information relevant to the pool. Bracket pools print a stylized
 debug     Print detailed information relevant to the pool simulation. Bracket pools print a stylized bracket showing the probabilities of players reaching each slot in the bracket. Round robin pools print a list of players in the pool.
 conflicts Print the regional conflicts, including an estimated severity of the conflict and the pair of players involved. A summary of conflict information is printed at the top of the list.
 seeds     Print the final seed list. These lists are importable into challonge using the 'The Order of the Participants List' style seeding.
-players   Lists the players in the order they were read, before any seeding has taken place.
+players   Lists the players in the order they were read, before any seeding has taken place. Has no effect with write
 ```
 
 ### Configuration

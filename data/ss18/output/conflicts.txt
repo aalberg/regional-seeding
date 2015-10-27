@@ -1,0 +1,223 @@
+Num conflicts: 31
+Num conflicts (filtered): 14
+Conflict score: 1.36378436849
+Conflict score (filtered): 1.33764625973
+Expected conflicts: 3.92293755681
+Expected conflicts (filtered): 3.62272644043
+Losers round 0
+Mario, Mr Fluffles
+p = 1.0
+score = 1.0
+{Mario: 1.0}
+{Mr Fluffles: 1.0}
+
+Losers round 1
+Scoopy, Vivi
+p = 0.375
+score = 0.09375
+{Chibi: 0.25, Scoopy: 0.75}
+{Vivi: 0.5, Baby: 0.5}
+
+Losers round 1
+inShane, Gafter
+p = 0.1875
+score = 0.046875
+{inShane: 0.75, Doiddlebod: 0.25}
+{Kdot: 0.75, Gafter: 0.25}
+
+Losers round 1
+229, Litany
+p = 0.125
+score = 0.03125
+{PW | Vincessant: 0.75, 229: 0.25}
+{ECK: 0.5, Litany: 0.5}
+
+Winners round 2
+AceOfFlakes, Chibi
+p = 0.25
+score = 0.0277777777778
+{AceOfFlakes: 1.0}
+{Chibi: 0.25, Scoopy: 0.75}
+
+Losers round 2
+Bonny, Cogzilla
+p = 0.2197265625
+score = 0.0244140625
+{Conn Man: 0.25, Llama: 0.046875, Bonny: 0.703125}
+{Mr Clean: 0.5625, Cogzilla: 0.3125, Skid: 0.125}
+
+Losers round 3
+The Brig, Bonny
+p = 0.339889526367
+score = 0.0212430953979
+{Kofi: 0.25, Fortune: 0.1875, The Brig: 0.5625}
+{Mr Clean: 0.112060546875, Cogzilla: 0.003662109375, Bonny: 0.604248046875, Llama: 0.028564453125, Conn Man: 0.25, Skid: 0.00146484375}
+
+Losers round 2
+JL, Scoopy
+p = 0.17578125
+score = 0.01953125
+{JL: 0.234375, Huckster: 0.109375, Hop: 0.140625, AAJ: 0.515625}
+{Chibi: 0.1875, Vivi: 0.03125, Scoopy: 0.75, Baby: 0.03125}
+
+Losers round 3
+SG, Wishh
+p = 0.25
+score = 0.015625
+{Lock: 0.5, SG: 0.5}
+{Junebug: 0.5, Wishh: 0.5}
+
+Losers round 2
+Gerg (PB&J before s0ft), Brooke
+p = 0.140625
+score = 0.015625
+{inShane: 0.046875, Reqy: 0.703125, Gerg (PB&J before s0ft): 0.25}
+{Brooke: 0.5625, Scoop: 0.125, Leo: 0.3125}
+
+Losers round 2
+Yin, PW | Vincessant
+p = 0.1171875
+score = 0.0130208333333
+{Firewater: 0.5625, JPez: 0.125, BulaclaFlocka: 0.15625, Yin: 0.15625}
+{PW | Vincessant: 0.75, ECK: 0.03125, Litany: 0.03125, 229: 0.1875}
+
+Losers round 2
+Firewater, 229
+p = 0.10546875
+score = 0.01171875
+{Firewater: 0.5625, JPez: 0.125, BulaclaFlocka: 0.15625, Yin: 0.15625}
+{PW | Vincessant: 0.75, ECK: 0.03125, Litany: 0.03125, 229: 0.1875}
+
+Losers round 3
+DJ, AAJ
+p = 0.149047851562
+score = 0.00931549072266
+{DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+{Scoopy: 0.439453125, Vivi: 0.002685546875, AAJ: 0.298095703125, JL: 0.076904296875, Baby: 0.002685546875, Hop: 0.081298828125, Chibi: 0.06298828125, Huckster: 0.035888671875}
+
+Losers round 2
+DJ, AAJ
+p = 0.0703125
+score = 0.0078125
+{DJ: 0.5, PB&J (Gerg before Sweedish): 0.5}
+{JL: 0.109375, Huckster: 0.234375, Hop: 0.515625, AAJ: 0.140625}
+
+Losers round 4
+Wishh, SG
+p = 0.1875
+score = 0.0075
+{Junebug: 0.5, Wishh: 0.5}
+{Lock: 0.375, Wishh: 0.125, SG: 0.375, Junebug: 0.125}
+
+Losers round 2
+Phatcat, Doiddlebod
+p = 0.03515625
+score = 0.00390625
+{Brooke: 0.046875, Phatcat: 0.25, Darkseid: 0.703125}
+{Kdot: 0.234375, inShane: 0.609375, Doiddlebod: 0.140625, Gafter: 0.015625}
+
+Losers round 3
+Bonny, The Brig
+p = 0.0625
+score = 0.00390625
+{Conn Man: 0.75, Bonny: 0.25}
+{Kofi: 0.5712890625, Mr Clean: 0.027099609375, Stone Free: 0.002197265625, Llama: 0.1494140625, The Brig: 0.25}
+
+Losers round 2
+Huckster, Chibi
+p = 0.0205078125
+score = 0.00227864583333
+{JL: 0.234375, Huckster: 0.109375, Hop: 0.140625, AAJ: 0.515625}
+{Chibi: 0.1875, Vivi: 0.03125, Scoopy: 0.75, Baby: 0.03125}
+
+Losers round 2
+Firewater, Litany
+p = 0.017578125
+score = 0.001953125
+{Firewater: 0.5625, JPez: 0.125, BulaclaFlocka: 0.15625, Yin: 0.15625}
+{PW | Vincessant: 0.75, ECK: 0.03125, Litany: 0.03125, 229: 0.1875}
+
+Losers round 3
+Gerg (PB&J before s0ft), Brooke
+p = 0.0211486816406
+score = 0.00132179260254
+{Reqy: 0.25, Gerg (PB&J before s0ft): 0.75}
+{inShane: 0.121398925781, Doiddlebod: 0.00164794921875, Kdot: 0.00274658203125, Phatcat: 0.25, Brooke: 0.0281982421875, Darkseid: 0.596008300781}
+
+Losers round 3
+Fortune, Mr Clean
+p = 0.0210113525391
+score = 0.00131320953369
+{Kofi: 0.25, Fortune: 0.1875, The Brig: 0.5625}
+{Mr Clean: 0.112060546875, Cogzilla: 0.003662109375, Bonny: 0.604248046875, Llama: 0.028564453125, Conn Man: 0.25, Skid: 0.00146484375}
+
+Losers round 4
+The Brig, Bonny
+p = 0.0225707888603
+score = 0.000902831554413
+{The Brig: 0.140625, Kofi: 0.178527832031, Bonny: 0.120681762695, Llama: 0.00933837890625, Conn Man: 0.549133300781, Mr Clean: 0.00169372558594}
+{Fortune: 0.17578125, The Brig: 0.407215118408, Kofi: 0.118804931641, Bonny: 0.160503387451, Llama: 0.00178527832031, Mr Clean: 0.00700378417969, Conn Man: 0.12890625}
+
+Losers round 2
+JL, Vivi
+p = 0.00732421875
+score = 0.000813802083333
+{JL: 0.234375, Huckster: 0.109375, Hop: 0.140625, AAJ: 0.515625}
+{Chibi: 0.1875, Vivi: 0.03125, Scoopy: 0.75, Baby: 0.03125}
+
+Losers round 2
+inShane, Scoop
+p = 0.005859375
+score = 0.000651041666667
+{inShane: 0.046875, Reqy: 0.703125, Gerg (PB&J before s0ft): 0.25}
+{Brooke: 0.5625, Scoop: 0.125, Leo: 0.3125}
+
+Losers round 2
+Hop, Baby
+p = 0.00439453125
+score = 0.00048828125
+{JL: 0.234375, Huckster: 0.109375, Hop: 0.140625, AAJ: 0.515625}
+{Chibi: 0.1875, Vivi: 0.03125, Scoopy: 0.75, Baby: 0.03125}
+
+Losers round 3
+Phatcat, Leo
+p = 0.00274658203125
+score = 0.000171661376953
+{Phatcat: 0.75, Darkseid: 0.25}
+{inShane: 0.028564453125, Reqy: 0.604248046875, Gerg (PB&J before s0ft): 0.25, Leo: 0.003662109375, Scoop: 0.00146484375, Brooke: 0.112060546875}
+
+Losers round 2
+Mr Clean, Mr Fluffles
+p = 0.00146484375
+score = 0.000162760416667
+{Kofi: 0.703125, Mr Clean: 0.046875, The Brig: 0.25}
+{Mario: 0.03125, Stone Free: 0.1875, Llama: 0.75, Mr Fluffles: 0.03125}
+
+Losers round 2
+Mr Clean, Mario
+p = 0.00146484375
+score = 0.000162760416667
+{Kofi: 0.703125, Mr Clean: 0.046875, The Brig: 0.25}
+{Mario: 0.03125, Stone Free: 0.1875, Llama: 0.75, Mr Fluffles: 0.03125}
+
+Losers round 4
+Gerg (PB&J before s0ft), Brooke
+p = 0.00381354958517
+score = 0.000152541983407
+{inShane: 0.00758743286133, Reqy: 0.119274139404, Gerg (PB&J before s0ft): 0.544498443604, Phatcat: 0.140625, Brooke: 0.00176239013672, Darkseid: 0.186252593994}
+{inShane: 0.00178527832031, Reqy: 0.188827514648, Gerg (PB&J before s0ft): 0.140625, Phatcat: 0.542953491211, Brooke: 0.00700378417969, Darkseid: 0.118804931641}
+
+Losers round 3
+The Brig, Cogzilla
+p = 0.00205993652344
+score = 0.000128746032715
+{Kofi: 0.25, Fortune: 0.1875, The Brig: 0.5625}
+{Mr Clean: 0.112060546875, Cogzilla: 0.003662109375, Bonny: 0.604248046875, Llama: 0.028564453125, Conn Man: 0.25, Skid: 0.00146484375}
+
+Losers round 4
+Mr Clean, Fortune
+p = 0.000297725200653
+score = 1.19090080261e-05
+{The Brig: 0.140625, Kofi: 0.178527832031, Bonny: 0.120681762695, Llama: 0.00933837890625, Conn Man: 0.549133300781, Mr Clean: 0.00169372558594}
+{Fortune: 0.17578125, The Brig: 0.407215118408, Kofi: 0.118804931641, Bonny: 0.160503387451, Llama: 0.00178527832031, Mr Clean: 0.00700378417969, Conn Man: 0.12890625}
+

@@ -1,0 +1,60 @@
+1 s0ft
+16 bye10
+          1 s0ft
+          8 Mr Clean
+8 Mr Clean
+9 Skid
+                    1 s0ft
+                    4 Conn Man
+4 Conn Man
+13 Mario
+          4 Conn Man
+          5 Bonny
+5 Bonny
+12 Mr Fluffles
+                              1 s0ft
+                              2 Fortune
+2 Fortune
+15 bye7
+          2 Fortune
+          7 Llama
+7 Llama
+10 Stone Free
+                    2 Fortune
+                    3 The Brig
+3 The Brig
+14 bye2
+          3 The Brig
+          6 Kofi
+6 Kofi
+11 Cogzilla
+
+------------------------------------------------------------
+                                                  2 Fortune
+                                                  4 Conn Man
+                              4 Conn Man
+                              6 Kofi
+          6 Kofi
+          9 bye10
+9 bye10
+16 Skid
+                    6 Kofi
+                    7 Llama
+          7 Llama
+          12 Mario
+12 Mario
+13 Mr Fluffles
+                                        4 Conn Man
+                                        3 The Brig
+                              3 The Brig
+                              5 Bonny
+          5 Bonny
+          10 bye7
+10 bye7
+15 Stone Free
+                    5 Bonny
+                    8 Mr Clean
+          8 Mr Clean
+          11 bye2
+11 bye2
+14 Cogzilla
