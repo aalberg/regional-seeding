@@ -7,6 +7,8 @@ Python 2.7
 Python 3 not supported
 
 ### Note
+This program is not going to be perfect. The goal is to aid TO's by doing most of the initial work up front, not replace hand seeding.
+
 Round Robin pools are still under construction and likely do not work.
 
 ### Quick Start
