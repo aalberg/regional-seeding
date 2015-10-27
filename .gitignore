@@ -61,4 +61,4 @@ target/
 # Misc
 *.xlsx
 *.tio
-data/**
+data/
