@@ -62,9 +62,9 @@ class Round:
 
     pool_players = [[] for i in xrange(self.num_pools)]
     for i in xrange(0, self.num_players):
-      j = i % self.num_pools
-      if j > (self.num_pools / 2) - 1:
-        j = self.num_pools - 1 - j
+      j = i % (2*self.num_pools)
+      if j > self.num_pools - 1:
+        j = 2*self.num_pools - 1 - j
       pool_players[j].append(self.players[i])
 
     self.pools = []
@@ -82,8 +82,8 @@ class Round:
 
     self.VerifyPlayers()
 
+  # Debug verification in case something is really messed up and there are duplicate players. (Cava is not The Brig no matter how much he wishes he was).
   def VerifyPlayers(self):
-    # Debug verification
     error = False
     for i in xrange(0, len(self.players)-1):
       for j in xrange(i+1, len(self.players)):

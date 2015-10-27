@@ -112,6 +112,7 @@ class BracketPool(interfaces.Pool):
   def GetEligibleMatch(self, match):
     skill_diff = -1
     closest_match = None
+    index = -1
     for new_match in self.matches[0]:
       if not new_match.players[1].is_bye:
         for i in xrange(1, -1, -1):
@@ -249,6 +250,10 @@ class BracketMatch:
       # Loop over matches leading into this one and determine who advances/falls to losers.
       for prev_index in xrange(0, 2):
         prev_match = self.match_from[prev_index]
+        if self.losers and not prev_match.losers:
+          self.players[prev_index] = prev_match.players[1]
+        else:
+          self.players[prev_index] = prev_match.players[0]
         for side in xrange(0, 2):
           for player, p1 in prev_match.p_players[side].iteritems():
             p = 0.0

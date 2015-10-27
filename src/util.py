@@ -26,8 +26,8 @@ def LoadConfig(config, config_types):
         line = line.rstrip()
         if len(line) <= 2:
           continue
-        field, value = ParseConfigLine(line)
-        print "Found config setting: " + field + ": \"" + value
+        field, value = ParseConfigLine(line, config_types)
+        print "Found config setting: " + field + ": \"" + str(value) + "\" " + str(type(value))
         config[field] = value
     print "Loaded config settings"
   except IOError:
