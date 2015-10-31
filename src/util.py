@@ -1,4 +1,5 @@
 import os
+import sys
 
 # Pool type enum
 class PoolType:

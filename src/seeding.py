@@ -1,3 +1,4 @@
+import os
 import sys
 import random
 
@@ -6,12 +7,12 @@ import player_data
 import util
 
 config = {
-  "config_file": "../cfg/config.txt",
-  "player_in_file": "../data/ss18/players_in_ss18_1.txt",
-  "pools_out_file_header": "../data/ss18/output/pool_",
-  "debug_out_file_header": "../data/ss18/output/debug_",
-  "conflicts_out_file": "../data/ss18/output/conflicts.txt",
-  "seeds_out_file_header": "../data/ss18/output/seeds_",
+  "config_file": "cfg/config.txt",
+  "player_in_file": "data/ss18/players_in_ss18_1.txt",
+  "pools_out_file_header": "data/ss18/output/pool_",
+  "debug_out_file_header": "data/ss18/output/debug_",
+  "conflicts_out_file": "data/ss18/output/conflicts.txt",
+  "seeds_out_file_header": "data/ss18/output/seeds_",
   "tolerance": 0,
   "num_pools": 1,
   "pool_type": util.PoolType.BRACKET,
@@ -68,7 +69,7 @@ def main():
       func = util.PrintStr
     elif command[0] == "write":
       func = util.WriteStr
-    elif command == "quit":
+    elif command[0] == "quit":
       print "Exiting"
       break
     else:

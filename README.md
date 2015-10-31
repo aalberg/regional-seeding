@@ -28,11 +28,11 @@ player2,score2,region2
 ```
 
 From the command line:
-1. cd into src
-2. Run `seeding.py`
-3. When the command prompt shows, type `write seeds`
 
-The seeded pool(s) will be located in `path/seeds/should/go/to<number>.txt` (where <number> is the pool number).
+1. Run `main.py`
+2. When the command prompt shows, type `write seeds`
+
+The seeded pool(s) will be located in `seeds_out_file_header[number].txt` (where [number] is the pool number).
 
 ### Input
 Input is read from the file pointed to by `player_in_file`. The input is in a csv format:
@@ -46,16 +46,18 @@ csv format can be easily generated with Excel or a comparable program.
 ### Suggested Player Skill
 Credit to Tom Georgen
 ```
-10 tends to be whoever the best expected winners are, usually no more than 4
+10 is whoever the best expected winners are, usually no more than 4
 9 is the great players right below them
-8 is really good players, like 8-12 on PR
+8 is really good players, 8-12 or so on the PR
 7 is for the rest of the PR
 6 is for borderline PR
-5 is for people I know to be solid (I would probably fall here)
+5 is for people known to be solid
 4 is for generally competent up and comers
 3 is for less good players that can at least L cancel
-2 or lower is total noob
+2 or lower is completely new player
 ```
+
+More skill levels and fractional levels can be added as needed. However, the spacing between skill levels is defined such that a player level L has a 75% chance of beating a player of level L-1, and a 100% chance of beating a player of level L-2. Skill levels must be positive.
 
 ### Command Line Output
 Several types of output are available from the built in command line. There are two main output commands: `print` and `write`. `print` will cause the desired output to be printed to the console. `write` will write the desired output to a file specified in the configuration options. Using `print` is not recommended, as the output may be large and some consoles (Windows command prompt) do not allow copying of output text.
@@ -72,7 +74,7 @@ players   Lists the players in the order they were read, before any seeding has 
 ### Configuration
 Edit `config.txt` in cfg to change the configuration of the program. To set the value of a configuration option, enter a line in `config.txt` with the name of the option followed by the new value, separated by a single space
 
-The full set of configuration options is listed below. All paths are relative to seeding.py.
+The full set of configuration options is listed below. All paths are relative to main.py.
 ```
 player_in_file          The location of the player input file.
 pools_out_file_header   The header of the pool output files.
