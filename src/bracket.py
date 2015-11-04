@@ -339,4 +339,4 @@ class BracketConflict(interfaces.Conflict):
     return self.__str__()
 
 if __name__ == "__main__":
-  print "Run seeding.py"
+  print "Run main.py"

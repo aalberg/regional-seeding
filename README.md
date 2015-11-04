@@ -1,5 +1,5 @@
 # regional-seeding
-Regional tournament bracket seeding program
+Regional tournament bracket seeding program for use with Challonge or smash.gg
 
 ### Requirements
 Python 2.7
@@ -8,8 +8,6 @@ Python 3 not supported
 
 ### Note
 This program is not going to be perfect. The goal is to aid TO's by doing most of the initial work up front, not replace hand seeding.
-
-Round Robin pools are still under construction and likely do not work.
 
 ### Quick Start
 Edit `cfg/config.txt`.
@@ -91,16 +89,15 @@ annealing_goal          Goal of annealing. If the cumulative conflict score drop
 
 Default settings:
 ```
-player_in_file          ../data/ss18/players_in_ss18_1.txt
-pools_out_file_header   ../data/ss18/output/pool_
-debug_out_file_header   ../data/ss18/output/debug_
-conflicts_out_file      ../data/ss18/output/conflicts.txt
-seeds_out_file_header   ../data/ss18/output/seeds_
+player_in_file          data/ss18/players_in_ss18_1.txt
+pools_out_file_header   data/ss18/output/pool_
+debug_out_file_header   data/ss18/output/debug_
+conflicts_out_file      data/ss18/output/conflicts.txt
+seeds_out_file_header   data/ss18/output/seeds_
 tolerance               0
 num_pools               1
 pool_type               1
 num_spaces_per_round    10
-use_advanced_bracket_seeding  True
 annealing_rounds        1000
 annealing_goal          -1.0
 ```

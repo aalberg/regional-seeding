@@ -8,18 +8,20 @@ class RoundRobinPool(interfaces.Pool):
 
   def SetSeeds(self, seeds):
     self.players = list(seeds)
-    self.num_players = len(players)
+    self.num_players = len(self.players)
 
   def GetSeeds(self):
-    return list(players)
+    return list(self.players)
 
   def GetSortedSeeds(self):
-    return list(players)
+    return list(self.players)
 
   def Simulate(self, conflicts):
-    for i in xrange(0, size - 1):
-      for j in xrange(i + 1, size):
-        if self.players[i].region == self.players[j] and not self.players[i].name == self.players[j].name:
+    for i in xrange(0, self.num_players - 1):
+      for j in xrange(i + 1, self.num_players):
+        if not self.players[i].is_bye and not self.players[j].is_bye and \
+           self.players[i].region == self.players[j].region and \
+           not self.players[i].name == self.players[j].name:
           conflicts.AddConflict(RoundRobinConflict(self.players[i], self.players[j]))
 
 # Pool conflict struct.
@@ -31,7 +33,7 @@ class RoundRobinConflict(interfaces.Conflict):
     self.p = 1.0
 
   def CalculateScore(self):
-    return 1
+    return self.player1.skill * self.player2.skill / 100.0
 
   def __hash__(self):
     return hash(tuple(sorted([self.player1.name, self.player2.name])))
@@ -47,4 +49,4 @@ class RoundRobinConflict(interfaces.Conflict):
     return self.__str__()
 
 if __name__ == "__main__":
-  print "Run seeding.py"
+  print "Run main.py"

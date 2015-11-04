@@ -102,4 +102,4 @@ class Player:
     return hash(self.name)
 
 if __name__ == "__main__":
-  print "Run seeding.py"
+  print "Run main.py"

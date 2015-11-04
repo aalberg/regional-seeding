@@ -4,4 +4,5 @@ debug_out_file_header data/ss18/output/debug_
 conflicts_out_file data/ss18/output/conflicts.txt
 seeds_out_file_header data/ss18/output/seeds_
 seeds_out_file_header data/ss18/output/seeds_
-num_pools 4
+pool_type 1
+annealing_rounds 1000

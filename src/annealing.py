@@ -136,9 +136,14 @@ class AnnealingState:
     self.conflicts = conflicts
 
   def SelectConflict(self):
-    rnd = random.uniform(0.0, self.score)
+    temp_score = self.score
+    for conflict in self.conflicts.conflicts.keys():
+      temp_score -= conflict.score
+    rnd = random.uniform(0.0, temp_score)
     total = 0.0
     for conflict in self.conflicts.conflicts.keys():
+      if conflict.player1.is_bye or conflict.player2.is_bye:
+        continue
       total += conflict.score
       if rnd <= total:
         return conflict
@@ -198,4 +203,4 @@ class ConflictSet:
            "\nExpected conflicts (filtered): " + str(e_conflicts_filtered) + "\n" + str_conflicts
 
 if __name__ == "__main__":
-  print "Run seeding.py"
+  print "Run main.py"

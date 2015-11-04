@@ -31,6 +31,7 @@ def LoadConfig(config, config_types):
         print "Found config setting: " + field + ": \"" + str(value) + "\" " + str(type(value))
         config[field] = value
     print "Loaded config settings"
+    print "-"*60
   except IOError:
     print "No config file found. Using default configuration"
 
