@@ -85,6 +85,7 @@ pool_type               1 for bracket pools, 2 for round robin.
 num_spaces_per_round    Spaces per bracket round for indenting bracket matches in output files.
 annealing_rounds        Number of simulated annealing rounds to output.
 annealing_goal          Goal of annealing. If the cumulative conflict score drops below this, annealing will stop.
+use_fixed_seed          Use a fixed seed for random number generation. Results in the same bracket being generated for the same input file and config settings.
 ```
 
 Default settings:
@@ -100,4 +101,5 @@ pool_type               1
 num_spaces_per_round    10
 annealing_rounds        1000
 annealing_goal          -1.0
+use_fixed_seed          1
 ```

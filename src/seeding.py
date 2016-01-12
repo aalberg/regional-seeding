@@ -20,6 +20,7 @@ config = {
   "num_spaces_per_round": 10,
   "annealing_rounds": 1000,
   "annealing_goal": -1.0,
+  "use_fixed_seed": 1,
   # Currently unused
   "swap_byes": False,
   "bye_swap_tolerance": 0,
@@ -41,6 +42,7 @@ config_types = {
   "num_spaces_per_round": "int",
   "annealing_rounds": "int",
   "annealing_goal": "float",
+  "use_fixed_seed": "int",
   # Currently unused
   "swap_byes": "bool",
   "bye_swap_tolerance": "int",
@@ -56,7 +58,8 @@ def main():
   util.LoadPlayers(config, player_map)
   print ""
 
-  random.seed(config["start_seed"])
+  if config["use_fixed_seed"] == 1:
+    random.seed(config["start_seed"])
   player_map.PadWithByes()
 
   manager = annealing.AnnealingManager(config, player_map)

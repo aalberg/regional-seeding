@@ -8,3 +8,4 @@ conflicts_out_file      conflicts.txt
 seeds_out_file_header   seeds_
 pool_type               1
 annealing_rounds        1000
+use_fixed_seed          1
