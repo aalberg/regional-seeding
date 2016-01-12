@@ -67,7 +67,7 @@ def LoadPlayers(config, player_map):
               player_map.AddPlayerRaw(split_line[0], split_line[1], split_line[2])
               print "Found player: " + split_line[0] + ", " + split_line[1] + ", " + split_line[2]
             except ValueError:
-              print "Count not parse player line:", line_num, split_line
+              print "Count not parse player line:", line_num
           else:
             print "Skipping player line:", line_num
             print split_line
