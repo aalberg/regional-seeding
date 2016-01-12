@@ -1,6 +1,6 @@
 # Paths are relative.
 player_in_file          data/ss18/players_in_ss18_1.txt
-# Out file names are appended to out folder name
+# Out file names are appended to out folder name.
 out_folder              data/ss18/output/
 pools_out_file_header   pool_
 debug_out_file_header   debug_
