@@ -31,6 +31,7 @@ def ParseConfigLine(line, config_types):
 def LoadConfig(config, config_types):
   try:
     with open(config["config_file"]) as f:
+      VerifyEncoding(f, "Config")
       line_num = 1
       for line in f:
         if not IsCommentLine(line):
@@ -52,6 +53,7 @@ def LoadConfig(config, config_types):
 def LoadPlayers(config, player_map):
   try:
     with open(config["player_in_file"]) as f:
+      VerifyEncoding(f, "Players")
       line_num = 1
       for line in f:
         if not IsCommentLine(line):
@@ -65,7 +67,7 @@ def LoadPlayers(config, player_map):
               player_map.AddPlayerRaw(split_line[0], split_line[1], split_line[2])
               print "Found player: " + split_line[0] + ", " + split_line[1] + ", " + split_line[2]
             except ValueError:
-              print "Count not parse player line:", line_num
+              print "Count not parse player line:", line_num, split_line
           else:
             print "Skipping player line:", line_num
             print split_line
@@ -77,6 +79,15 @@ def LoadPlayers(config, player_map):
 
 def IsCommentLine(line):
   return len(line.lstrip()) > 0 and line.lstrip()[0] == '#'
+  
+def VerifyEncoding(file, type):
+  line = file.readline()
+  try:
+    line.decode('ascii')
+  except UnicodeDecodeError:
+    print type, "file is not ascii or UTF-8. Please save players file as ascii or UTF-8."
+    sys.exit(0)
+  file.seek(0)
     
 # Output functions.
 def PrintStr(param):
