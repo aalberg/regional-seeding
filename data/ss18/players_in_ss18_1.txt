@@ -1,3 +1,4 @@
+# Comments are supported in player files too.
 Redd,10,RVA
 The Moon,10,NY
 s0ft,9,GA
