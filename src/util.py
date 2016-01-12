@@ -48,7 +48,7 @@ def LoadConfig(config, config_types):
     print "Loaded config settings"
     print "-"*60
   except IOError:
-    print "No config file found. Using default configuration"
+    print "No config file found. Using default configuration."
 
 def LoadPlayers(config, player_map):
   try:
