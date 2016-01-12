@@ -9,10 +9,11 @@ import util
 config = {
   "config_file": "cfg/config.txt",
   "player_in_file": "data/ss18/players_in_ss18_1.txt",
-  "pools_out_file_header": "data/ss18/output/pool_",
-  "debug_out_file_header": "data/ss18/output/debug_",
-  "conflicts_out_file": "data/ss18/output/conflicts.txt",
-  "seeds_out_file_header": "data/ss18/output/seeds_",
+  "out_folder": "data/ss18/output/",
+  "pools_out_file_header": "pool_",
+  "debug_out_file_header": "debug_",
+  "conflicts_out_file": "conflicts.txt",
+  "seeds_out_file_header": "seeds_",
   "tolerance": 0,
   "num_pools": 1,
   "pool_type": util.PoolType.BRACKET,
@@ -29,6 +30,7 @@ config = {
 config_types = {
   "config_file": "string",
   "player_in_file": "string",
+  "out_folder": "string",
   "pools_out_file_header": "string",
   "debug_out_file_header": "string",
   "conflicts_out_file": "string",
@@ -64,28 +66,44 @@ def main():
 
   command = ""
   while not command == "quit":
+    # Process input.
     command = raw_input(" $ ").split()
-    if command[0] == "print":
-      func = util.PrintStr
-    elif command[0] == "write":
-      func = util.WriteStr
-    elif command[0] == "quit":
-      print "Exiting"
-      break
-    else:
-      print "Command not found"
-      continue
+    for i in xrange(len(command)):
+      command[i] = command[i].strip()
+    command = filter(None, command)
 
-    if command[1] == "pools":
-      manager.round.WritePools(func, config["pools_out_file_header"])
-    elif command[1] == "debug":
-      manager.round.WritePools(func, config["debug_out_file_header"], True)
-    elif command[1] == "conflicts":
-      manager.round.WriteConflicts(func, config["conflicts_out_file"])
-    elif command[1] == "seeds":
-      manager.round.WritePoolSeeds(func, config["seeds_out_file_header"])
-    elif command[1] == "players":
-      func((player_map.GetPlayersBySkillString(), None))
+    num_parts = len(command)
+    # Command length 1 (quit)
+    if len(command) == 1:
+      if command[0] == "quit":
+        print "Exiting"
+        break
+      else:
+        print "Command not found"
+        continue
+    # Command length 2 (print or write)
+    elif len(command) == 2:
+      if command[0] == "print":
+        func = util.PrintStr
+      elif command[0] == "write":
+        func = util.WriteStr
+      else:
+        print "Command not found"
+        continue
+
+      if command[1] == "pools":
+        manager.round.WritePools(func, config["out_folder"] + config["pools_out_file_header"])
+      elif command[1] == "debug":
+        manager.round.WritePools(func, config["out_folder"] + config["debug_out_file_header"], True)
+      elif command[1] == "conflicts":
+        manager.round.WriteConflicts(func, config["out_folder"] + config["conflicts_out_file"])
+      elif command[1] == "seeds":
+        manager.round.WritePoolSeeds(func, config["out_folder"] + config["seeds_out_file_header"])
+      elif command[1] == "players":
+        func((player_map.GetPlayersBySkillString(), None))
+      else:
+        print "Command not found"
+        continue
     else:
       print "Command not found"
       continue
