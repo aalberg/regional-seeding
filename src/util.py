@@ -76,6 +76,10 @@ def LoadPlayers(config, player_map):
   except IOError:
     print "No player data file found. Exiting."
     sys.exit(0)
+    
+  if len(player_map.player_list) < 2:
+    print "Not enough players found. Exiting."
+    sys.exit(0)
 
 def IsCommentLine(line):
   return len(line.lstrip()) > 0 and line.lstrip()[0] == '#'
@@ -83,9 +87,9 @@ def IsCommentLine(line):
 def VerifyEncoding(file, type):
   line = file.readline()
   try:
-    line.decode('ascii')
+    line.decode('utf8')
   except UnicodeDecodeError:
-    print type, "file is not ascii or UTF-8. Please save players file as ascii or UTF-8."
+    print type, "file is not UTF-8. Please save players file as UTF-8."
     sys.exit(0)
   file.seek(0)
     

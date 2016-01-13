@@ -152,6 +152,8 @@ class AnnealingState:
   def GetNewState(self, player_map, range):
     # Choose players to swap
     conflict = self.SelectConflict()
+    if conflict == None:
+      return self
     player = conflict.player1
     if conflict.player1.p_win(conflict.player2) > random.random():
       player = conflict.player2

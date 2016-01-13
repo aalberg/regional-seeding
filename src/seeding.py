@@ -76,10 +76,13 @@ def main():
     command = filter(None, command)
 
     num_parts = len(command)
-    # Command length 1 (quit)
+    # Command length 1 (quit or version)
     if len(command) == 1:
       if command[0] == "quit":
         print "Exiting"
+        break
+      elif command[0] == "version":
+        print "1.0.1"
         break
       else:
         print "Command not found"

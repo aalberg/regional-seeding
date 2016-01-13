@@ -39,7 +39,7 @@ class RoundRobinConflict(interfaces.Conflict):
     return hash(tuple(sorted([self.player1.name, self.player2.name])))
 
   def __eq__(self, other):
-    return self.player1 == other.player1 and self.player2 == other.player2 or \
+    return not other == None and self.player1 == other.player1 and self.player2 == other.player2 or \
            self.player1 == other.player2 and self.player2 == other.player1
 
   def __str__(self):

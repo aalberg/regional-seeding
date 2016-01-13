@@ -1,5 +1,6 @@
 # regional-seeding
 Regional tournament bracket seeding program for use with Challonge or smash.gg
+Current version: 1.01
 
 ### Requirements
 Python 2.7
@@ -75,6 +76,7 @@ Edit `config.txt` in cfg to change the configuration of the program. To set the 
 The full set of configuration options is listed below. All paths are relative to main.py.
 ```
 player_in_file          The location of the player input file.
+out_folder              The folder to store output files in.
 pools_out_file_header   The header of the pool output files.
 debug_out_file_header   The header of the pool debug info output files.
 conflicts_out_file      The location of the conflict output file.
@@ -91,10 +93,11 @@ use_fixed_seed          Use a fixed seed for random number generation. Results i
 Default settings:
 ```
 player_in_file          data/ss18/players_in_ss18_1.txt
-pools_out_file_header   data/ss18/output/pool_
-debug_out_file_header   data/ss18/output/debug_
-conflicts_out_file      data/ss18/output/conflicts.txt
-seeds_out_file_header   data/ss18/output/seeds_
+out_folder              data/ss18/output/
+pools_out_file_header   pool_
+debug_out_file_header   debug_
+conflicts_out_file      conflicts.txt
+seeds_out_file_header   seeds_
 tolerance               0
 num_pools               1
 pool_type               1

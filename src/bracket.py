@@ -260,6 +260,7 @@ class BracketMatch:
             for opponent, p2 in prev_match.p_players[1-side].iteritems():
               p += p1 * p2 * player.p_win(opponent)
               if prev_match.losers == self.losers and \
+                 not player.is_bye and not opponent.is_bye and \
                  player.region == opponent.region and not player.name == opponent.name:
                 e_conflicts += p1 * p2 / 2
                 conflict = BracketConflict(prev_match, player, opponent, p1 * p2,
@@ -321,7 +322,8 @@ class BracketConflict(interfaces.Conflict):
     return hash((tuple(sorted([self.player1.name, self.player2.name])), self.round, self.losers))
 
   def __eq__(self, other):
-    return self.match == other.match and (self.player1 == other.player1 and self.player2 == other.player2 or \
+    return not other == None and self.match == other.match and \
+           (self.player1 == other.player1 and self.player2 == other.player2 or \
            self.player1 == other.player2 and self.player2 == other.player1)
 
   def __str__(self):
