@@ -1,5 +1,6 @@
 # regional-seeding
 Regional tournament bracket seeding program for use with Challonge or smash.gg
+
 Current version: 1.01
 
 ### Requirements
