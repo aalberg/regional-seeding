@@ -63,4 +63,4 @@ target/
 *.tio
 data/
 cfg/config.txt
-data/**
+data/**/*
