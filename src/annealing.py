@@ -1,5 +1,7 @@
 import math
 import random
+import threading
+import time
 
 import bracket
 import round_robin
@@ -9,6 +11,8 @@ class AnnealingManager:
   def __init__(self, config, player_map):
     self.config = config
     self.player_map = player_map
+    self.saved_states = {}
+    self.round = None
 
   def RunSimulatedAnnealing(self):
     self.round = Round(self.config, self.config["num_pools"], self.config["pool_type"], self.player_map)
@@ -16,6 +20,9 @@ class AnnealingManager:
     s = AnnealingState(self.round.conflicts.score, self.round.players, self.round.conflicts)
     s_cur = s
     print "Best score: " + str(s.score)
+
+    times = []
+    start = time.clock()
 
     # Run simulated annealing
     k = self.config["annealing_rounds"]
@@ -29,6 +36,8 @@ class AnnealingManager:
       s_new.score = self.round.conflicts.score
       s_new.conflicts = self.round.conflicts
 
+      times.append(self.round.sim_time)
+
       # Possibly advance to the new state
       if self.P(s_cur.score, s_new.score, T) >= random.random():
         s_cur = s_new
@@ -41,8 +50,56 @@ class AnnealingManager:
 
     self.round.SetSeeds(s.seeds)
     self.round.Simulate()
+    times.append(self.round.sim_time)
     self.round.VerifyPlayers()
     print "Done simulated annealing"
+    end = time.clock()
+
+    print "Total annealing time:", end - start
+    print "Mean simulation time:", sum(times) / float(len(times))
+
+  def ForceSimulate(self):
+    if not self.round == None:
+      self.round.need_simulation = True
+      self.round.Simulate()
+      print "New score", self.round.conflicts.score, self.round.conflicts.e_conflicts
+
+  def SaveState(self, name):
+    if not self.round == None:
+      self.saved_states[name] = self.round.GetSeeds()
+      print "Saved state:", name
+    else:
+      print "Could not save state:", name
+
+  def LoadState(self, name):
+    if not self.round == None and name in self.saved_states:
+      self.round.SetSeeds(self.saved_states[name])
+      print "Loaded state:", name
+    else:
+      print "Could not load state:", name
+
+  def SwapPlayers(self, player1, player2):
+    if player1 == player2 or self.round == None:
+      return
+
+    i1 = -1
+    i2 = -1
+    players = self.round.GetSeeds()
+    print players
+    for i in xrange(len(players)):
+      if players[i].name == player1:
+        i1 = i
+      elif players[i].name == player2:
+        i2 = i
+      if i1 >= 0 and i2 >= 0:
+        players[i1], players[i2] = players[i2], players[i1]
+        self.round.SetSeeds(players)
+        print "Swapped", player1, "with", player2, i1, i2
+        return
+    if i1 < 0:
+      print "Could not find player", player1
+    if i2 < 0:
+      print "Could not find player", player2
 
   def Temperature(self, i, k):
     return 1 - (float(i)/k)
@@ -95,6 +152,7 @@ class Round:
       None.hi
 
   def SetSeeds(self, seeds):
+    self.players = seeds
     for i in xrange(0, self.num_pools):
       start = self.players_per_pool * i
       self.pools[i].SetSeeds(seeds[start: start + self.players_per_pool])
@@ -106,10 +164,15 @@ class Round:
   def Simulate(self):
     if not self.need_simulation:
       return
+    start = time.clock()
     self.conflicts = ConflictSet()
+    
     for pool in self.pools:
       pool.Simulate(self.conflicts)
+
     self.need_simulation = False
+    end = time.clock()
+    self.sim_time = end - start
 
   def WritePools(self, function, file_prefix="", debug = False):
     for i in xrange(0, self.num_pools):
@@ -181,6 +244,15 @@ class ConflictSet:
       self.num_conflicts += 1
       self.score += conflict.score
       self.e_conflicts += conflict.p
+
+  # TODO(aalberg) Speed this up
+  def AppendConflictSet(self, conflict_set):
+    self.conflicts.update(conflict_set.conflicts)
+    self.num_conflicts += conflict_set.num_conflicts
+    self.score += conflict_set.score
+    self.e_conflicts += conflict_set.e_conflicts
+    #for conflict in conflict_set.conflicts:
+    #  self.AddConflict(conflict)
 
   def GetConflictsByImportance(self):
     return sorted(self.conflicts.keys(), key=lambda conflict: conflict.score, reverse=True)

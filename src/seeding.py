@@ -84,12 +84,27 @@ def main():
       elif command[0] == "version":
         print "1.0.1"
         break
+      elif command[0] == "simulate":
+        manager.ForceSimulate()
       else:
         print "Command not found"
         continue
-    # Command length 2 (print or write)
+    # Command length 2 (save, load, swap, print, write)
     elif len(command) == 2:
-      if command[0] == "print":
+      if command[0] == "save":
+        manager.SaveState(command[1])
+        continue
+      elif command[0] == "load":
+        manager.LoadState(command[1])
+        continue
+      elif command[0] == "swap":
+        players = ' '.join(command[1:]).split(',')
+        if len(players) == 2:
+          manager.SwapPlayers(players[0], players[1])
+        else:
+          print "Command not found"
+        continue
+      elif command[0] == "print":
         func = util.PrintStr
       elif command[0] == "write":
         func = util.WriteStr
