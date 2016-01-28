@@ -317,7 +317,22 @@ class BracketConflict(interfaces.Conflict):
 
   def Calculatescore(self):
     return self.p / ((self.round + 1)**2)
-
+    
+  def __lt__(self, other):
+    if isinstance(other, BracketConflict):
+      return 0
+    elif not self.score == other.score:
+      return self.score < other.score
+    elif not self.p == other.p:
+      return self.p < other.p
+    elif not self.round == other.round:
+      return self.round < other.round
+    elif not self.player1 == other.player1:
+      return self.player1 < other.player1
+    elif not self.player2 == other.player2:
+      return self.player2 < other.player2
+    return 1
+      
   def __hash__(self):
     return hash((tuple(sorted([self.player1.name, self.player2.name])), self.round, self.losers))
 

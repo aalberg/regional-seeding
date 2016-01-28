@@ -65,14 +65,13 @@ def LoadPlayers(config, player_map):
           if len(split_line) == 3:
             try:
               player_map.AddPlayerRaw(split_line[0], split_line[1], split_line[2])
-              print "Found player: " + split_line[0] + ", " + split_line[1] + ", " + split_line[2]
             except ValueError:
               print "Count not parse player line:", line_num
           else:
             print "Skipping player line:", line_num
             print split_line
         line_num += 1
-    print "Loaded player data"
+    print "Loaded player data. Players found:", player_map.num_players
   except IOError:
     print "No player data file found. Exiting."
     sys.exit(0)

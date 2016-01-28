@@ -7,12 +7,14 @@ class PlayerMap:
   def __init__(self):
     self.player_list = []
     self.skill_map = {}
+    self.num_players = 0
 
   def AddPlayer(self, player):
     self.player_list.append(player)
     if player.skill not in self.skill_map:
       self.skill_map[player.skill] = []
     self.skill_map[player.skill].append(player)
+    self.num_players += 1
 
   def AddPlayerRaw(self, name, skill, region):
     player = Player(name, int(skill), region)
@@ -62,6 +64,9 @@ class PlayerMap:
     target = 1<<(current-1).bit_length()
     for i in xrange(1, target - current + 1):
       self.AddPlayer(Player(new_name="bye"+str(i), new_is_bye=True))
+      
+    for key in self.skill_map.keys():
+      self.skill_map[key].sort()
 
   def GetPlayersString(self):
     str_out = ""
@@ -83,7 +88,6 @@ class Player:
     self.region = new_region
     self.is_bye = new_is_bye
 
-  # TODO: Improve the probability model of players winning a match
   def p_win(self, opponent):
     diff = self.skill - opponent.skill
     if diff >= 2:
@@ -91,6 +95,11 @@ class Player:
     elif diff <= -2:
       return 0
     return .5 + .25*diff
+
+  def __lt__(self, other):
+    if not self.skill == other.skill:
+      return self.skill > other.skill
+    return self.name < other.name
 
   def __str__(self):
     return self.name

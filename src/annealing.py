@@ -53,6 +53,7 @@ class AnnealingManager:
     times.append(self.round.sim_time)
     self.round.VerifyPlayers()
     print "Done simulated annealing"
+    print "Final score:", s.score, s.conflicts.e_conflicts
     end = time.clock()
 
     print "Total annealing time:", end - start
@@ -114,6 +115,7 @@ class Round:
     self.config = config
     self.num_pools = num_pools
     self.players = player_map.GetPlayersBySkill()
+    #print self.players
     self.num_players = len(self.players)
     self.players_per_pool = self.num_players / self.num_pools
 
@@ -199,12 +201,9 @@ class AnnealingState:
     self.conflicts = conflicts
 
   def SelectConflict(self):
-    temp_score = self.score
-    for conflict in self.conflicts.conflicts.keys():
-      temp_score -= conflict.score
-    rnd = random.uniform(0.0, temp_score)
+    rnd = random.uniform(0.0, self.score)
     total = 0.0
-    for conflict in self.conflicts.conflicts.keys():
+    for conflict in self.conflicts.GetConflictsByImportance():
       if conflict.player1.is_bye or conflict.player2.is_bye:
         continue
       total += conflict.score
@@ -214,15 +213,17 @@ class AnnealingState:
 
   def GetNewState(self, player_map, range):
     # Choose players to swap
-    conflict = self.SelectConflict()
-    if conflict == None:
-      return self
-    player = conflict.player1
-    if conflict.player1.p_win(conflict.player2) > random.random():
-      player = conflict.player2
-    opponent = player
-    while opponent == player:
-      opponent = player_map.GetRandomPlayerWithinSkill(player.skill, range)
+    opponent = None
+    while opponent == None:
+      conflict = self.SelectConflict()
+      if conflict == None:
+        return self
+      player = conflict.player1
+      if conflict.player1.p_win(conflict.player2) > random.random():
+        player = conflict.player2
+      opponent = player
+      while opponent == player:
+        opponent = player_map.GetRandomPlayerWithinSkill(player.skill, range)
 
     # Swap the players in the seed lists
     seeds = list(self.seeds)
@@ -245,17 +246,8 @@ class ConflictSet:
       self.score += conflict.score
       self.e_conflicts += conflict.p
 
-  # TODO(aalberg) Speed this up
-  def AppendConflictSet(self, conflict_set):
-    self.conflicts.update(conflict_set.conflicts)
-    self.num_conflicts += conflict_set.num_conflicts
-    self.score += conflict_set.score
-    self.e_conflicts += conflict_set.e_conflicts
-    #for conflict in conflict_set.conflicts:
-    #  self.AddConflict(conflict)
-
   def GetConflictsByImportance(self):
-    return sorted(self.conflicts.keys(), key=lambda conflict: conflict.score, reverse=True)
+    return sorted(self.conflicts.keys(), reverse=True)
 
   def GetConflictsString(self):
     str_conflicts = ""
@@ -275,6 +267,12 @@ class ConflictSet:
            "\nConflict score (filtered): " + str(e_importance_filtered) + \
            "\nExpected conflicts: " + str(self.e_conflicts) + \
            "\nExpected conflicts (filtered): " + str(e_conflicts_filtered) + "\n" + str_conflicts
+           
+  def __repr__(self):
+    return self.GetConflictsString()
+    
+  def __str__(self):
+    return self.GetConflictsString()
 
 if __name__ == "__main__":
   print "Run main.py"
