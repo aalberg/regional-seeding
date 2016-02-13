@@ -1,7 +1,7 @@
 # regional-seeding
 Regional tournament bracket seeding program for use with Challonge or smash.gg
 
-Current version: 1.1.1
+Current version: 1.1.2
 
 ### Requirements
 Python 2.7
