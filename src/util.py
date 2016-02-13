@@ -115,3 +115,15 @@ def WriteStr(param):
 
 if __name__ == "__main__":
   print "Run seeding.py"
+  
+# Debug verification in case something is really messed up and there are duplicate players. (Cava is not The Brig no matter how much he wishes he was).
+def VerifyPlayers(players):
+  error = False
+  for i in xrange(0, len(players)-1):
+    for j in xrange(i+1, len(players)):
+      if players[i] == players[j]:
+        print "ERROR", players[i], players[j]
+        print players
+        error = True
+  if error:
+    None.duplicate_player

@@ -51,7 +51,6 @@ class AnnealingManager:
     self.round.SetSeeds(s.seeds)
     self.round.Simulate()
     times.append(self.round.sim_time)
-    self.round.VerifyPlayers()
     print "Done simulated annealing"
     print "Final score:", s.score, s.conflicts.e_conflicts
     end = time.clock()
@@ -139,20 +138,6 @@ class Round:
 
     self.need_simulation = True
 
-    self.VerifyPlayers()
-
-  # Debug verification in case something is really messed up and there are duplicate players. (Cava is not The Brig no matter how much he wishes he was).
-  def VerifyPlayers(self):
-    error = False
-    for i in xrange(0, len(self.players)-1):
-      for j in xrange(i+1, len(self.players)):
-        if self.players[i] == self.players[j]:
-          print "ERROR", self.players[i], self.players[j]
-          print self.players
-          error = True
-    if error:
-      None.hi
-
   def SetSeeds(self, seeds):
     self.players = seeds
     for i in xrange(0, self.num_pools):
@@ -188,7 +173,7 @@ class Round:
     function((self.conflicts.GetConflictsString(), file))
 
   def WritePoolSeeds(self, function, file_prefix=""):
-    self.VerifyPlayers()
+    util.VerifyPlayers(self.players)
     for i in xrange(0, self.num_pools):
       pool_str = '\n'.join([player.name for player in self.pools[i].GetSortedSeeds()])
       function((pool_str, file_prefix + str(i + 1) + ".txt"))

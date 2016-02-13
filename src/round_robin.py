@@ -36,7 +36,7 @@ class RoundRobinConflict(interfaces.Conflict):
     return self.player1.skill * self.player2.skill / 100.0
 
   def __lt__(self, other):
-    if isinstance(other, RoundRobinConflict):
+    if not isinstance(other, RoundRobinConflict):
       return 0
     elif not self.score == other.score:
       return self.score < other.score

@@ -1,4 +1,5 @@
 import interfaces
+import util
 
 # Bracket class.
 class BracketPool(interfaces.Pool):
@@ -96,7 +97,6 @@ class BracketPool(interfaces.Pool):
         match.players[1], closest_match.players[index] = closest_match.players[index], match.players[1]
       # Otherwise, swap that player with the lower seeded player in the bracket.
       elif not closest_player == None:
-        print self.GetWinnersBracketString()
         print "Swapping players " + str(match.seeds[1]) + " " + match.players[1].name + " with " + \
               closest_player.name
         i = 0
@@ -106,7 +106,6 @@ class BracketPool(interfaces.Pool):
         self.players[match.seeds[1]-1], self.players[i] = \
           self.players[i], self.players[match.seeds[1]-1]
         match.players[1] = closest_player
-        print self.GetWinnersBracketString()
 
   # Search for another match in the current round that would be eligible to swap.
   def GetEligibleMatch(self, match):
@@ -130,13 +129,15 @@ class BracketPool(interfaces.Pool):
   def GetEligiblePlayer(self, match):
     skill_diff = -1
     closest_player = None
-    for new_player in self.players:
+    for i in xrange(len(2 * self.matches[0]), len(self.players)):
+      new_player = self.players[i]
       new_skill_diff = abs(match.players[1].skill - new_player.skill)
       if not new_player.is_bye and \
          not new_player.region == match.players[1].region and \
          new_skill_diff <= self.config["tolerance"] and (skill_diff == -1 or skill_diff > new_skill_diff):
         closest_player = new_player
         skill_diff = new_skill_diff
+        print "Player found at", i
 
     return skill_diff, closest_player
 
@@ -319,7 +320,7 @@ class BracketConflict(interfaces.Conflict):
     return self.p / ((self.round + 1)**2)
     
   def __lt__(self, other):
-    if isinstance(other, BracketConflict):
+    if not isinstance(other, BracketConflict):
       return 0
     elif not self.score == other.score:
       return self.score < other.score
