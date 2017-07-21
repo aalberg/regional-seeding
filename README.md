@@ -43,8 +43,7 @@ player2,score2,region2
 ```
 csv format can be easily generated with Excel or a comparable program.
 
-### Suggested Player Skill
-Credit to Tom Georgen
+### Possible Player Skill Bins
 ```
 10 is whoever the best expected winners are, usually no more than 4
 9 is the great players right below them
